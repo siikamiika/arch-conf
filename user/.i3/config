@@ -145,7 +145,7 @@ bindsym $mod+d mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command python ~/koodi/scripts/i3/i3pystatus_conf.py
+        status_command python ~/i3pystatus/i3pystatus_conf.py
         tray_output primary
 }
 
