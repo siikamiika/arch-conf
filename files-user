@@ -1,0 +1,14 @@
+~/.bash_logout
+~/.bash_profile
+~/.bashrc
+~/.xbindkeysrc
+~/.Xdefaults
+~/.xinitrc
+~/.Xmodmap
+~/.mpv/mpv.conf
+~/.mpv/input.conf
+~/.i3/config
+~/.config/fcitx/profile
+~/.config/fcitx/config
+~/.config/ranger/rc.conf
+~/.config/ranger/rifle.conf

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+pacman -Qnqe > packages
+pacman -Qmqe > packages-aur

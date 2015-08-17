@@ -1,0 +1,25 @@
+### audio
+"pamixer --increase 2"
+    XF86AudioRaiseVolume
+"pamixer --decrease 2"
+    XF86AudioLowerVolume
+"pamixer -t"
+    XF86AudioMute
+# alternative, when no keys available
+"pamixer --increase 2"
+    Control+Alt + Right
+"pamixer --decrease 2"
+    Control+Alt + Left
+"pamixer -t"
+    Control+Alt + KP_Insert
+
+### backlight
+"xbacklight -inc 5"
+    XF86MonBrightnessUp
+"xbacklight -dec 5"
+    XF86MonBrightnessDown
+# alternative, when no keys available
+"xbacklight -inc 5"
+    Control+Alt + Up
+"xbacklight -dec 5"
+    Control+Alt + Down
