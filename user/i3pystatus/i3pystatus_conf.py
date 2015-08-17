@@ -23,6 +23,7 @@ status.register("battery",
 
 status.register(PulseAudio,
     format="♪{volume}{muted}",
+    step=2,
     #color=I3BLUE,
     )
 
