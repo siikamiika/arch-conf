@@ -6,12 +6,13 @@ from signal import SIGTERM
 class PulseAudio(PulseAudio):
     settings = PulseAudio.settings + ["color"]
     color = "#FFFFFF"
+    on_leftclick = "pavutoggle"
 
     def sink_info_cb(self, context, sink_info_p, _, __):
         super().sink_info_cb(context, sink_info_p, _, __)
         self.output["color"] = self.color
 
-    def on_leftclick(self):
+    def pavutoggle(self):
         pids = getoutput("pgrep pavucontrol").splitlines()
         if pids:
             for pid in pids:
