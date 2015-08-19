@@ -13,9 +13,6 @@ bc
 bind-tools
 binutils
 bison
-bluedevil
-breeze
-breeze-icons
 bumblebee
 bzip2
 chromium
@@ -28,7 +25,6 @@ dialog
 diffutils
 dmenu
 docbook-xsl
-drkonqi
 e2fsprogs
 empathy
 eog
@@ -99,17 +95,6 @@ inetutils
 iproute2
 iputils
 jfsutils
-kde-gtk-config
-kdeplasma-addons
-khelpcenter
-kinfocenter
-kio-extras
-kmenuedit
-kscreen
-ksshaskpass
-ksysguard
-kwin
-kwrited
 leafpad
 less
 lib32-alsa-plugins
@@ -131,7 +116,6 @@ make
 man-db
 man-pages
 mdadm
-milou
 mlocate
 mousetweaks
 mumble
@@ -144,8 +128,6 @@ ntfs-3g
 nvidia
 openssh
 os-prober
-oxygen
-oxygen-cursors
 pacman
 patch
 pavucontrol
@@ -156,12 +138,6 @@ perl
 pidgin
 pkg-config
 pkgfile
-plasma-desktop
-plasma-mediacenter
-plasma-nm
-plasma-workspace
-plasma-workspace-wallpapers
-powerdevil
 powertop
 ppsspp
 primus
@@ -192,7 +168,6 @@ sushi
 sxiv
 sysfsutils
 systemd-sysvcompat
-systemsettings
 tar
 terminus-font
 texinfo
