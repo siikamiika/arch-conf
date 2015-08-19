@@ -149,5 +149,10 @@ bar {
         tray_output primary
 }
 
+# compton
+#new_window pixel
+#exec --no-startup-id compton -b --backend glx --vsync opengl-mswc --unredir-if-possible
+
 # floating
 for_window [class="Wine"] floating enable
+for_window [class="Pcsx2"] floating enable

@@ -21,6 +21,7 @@ export XMODIFIERS=@im=fcitx
 fcitx -d &
 
 #exec gnome-session
+#exec gnome-session --session=i3
 exec i3
 #export KDEWM=/usr/bin/i3
 #exec startkde

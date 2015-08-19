@@ -60,3 +60,11 @@ xkb_symbols "basic" {
 
     include "level3(ralt_switch)"
 };
+
+partial alphanumeric_keys
+xkb_symbols "fcitx-hack" {
+
+    include "autism(basic)"
+
+    name[Group1]="Autism (US, fcitx hack)";
+};

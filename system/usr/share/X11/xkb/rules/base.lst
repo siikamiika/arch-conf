@@ -282,6 +282,7 @@
   md              Moldavian
 
 ! variant
+  fcitx-hack      autism: Autism (US, fcitx hack)
   chr             us: Cherokee
   euro            us: English (US, with euro on 5)
   intl            us: English (US, international with dead keys)

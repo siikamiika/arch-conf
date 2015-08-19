@@ -1306,6 +1306,18 @@
           <iso639Id>fin</iso639Id>
         </languageList>
       </configItem>
+      <variantList>
+        <variant>
+          <configItem>
+            <name>fcitx-hack</name>
+            <shortDescription>fcitx-hack</shortDescription>
+            <description>Autism (US, fcitx hack)</description>
+            <languageList>
+              <iso639Id>fin</iso639Id>
+            </languageList>
+          </configItem>
+        </variant>
+      </variantList>
     </layout>
     <layout>
       <configItem>
