@@ -39,9 +39,6 @@ bindsym $mod+r exec j4-dmenu-desktop
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
-# keybinds
-bindsym $mod+l exec i3lock-wrapper
-
 # change focus
 #bindsym $mod+j focus left
 #bindsym $mod+k focus down
@@ -149,9 +146,8 @@ bar {
         tray_output primary
 }
 
-# compton
-#new_window pixel
-#exec --no-startup-id compton -b --backend glx --vsync opengl-mswc --unredir-if-possible
+# custom key bindings
+bindsym $mod+l exec i3lock-wrapper
 
 # floating
 for_window [class="Wine"] floating enable

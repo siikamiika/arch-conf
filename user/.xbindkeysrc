@@ -23,3 +23,7 @@
     Control+Alt + Up
 "xbacklight -dec 5"
     Control+Alt + Down
+
+### python-clipmenu
+"python-clipmenu-client"
+    Control+Alt + h

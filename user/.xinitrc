@@ -14,6 +14,9 @@ fi
 ### xbindkeys
 xbindkeys &
 
+### python-clipmenu
+python-clipmenu-daemon &
+
 ### fcitx
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
