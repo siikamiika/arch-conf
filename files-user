@@ -15,6 +15,7 @@
 ~/.config/fcitx/profile
 ~/.config/fcitx/config
 ~/.config/fcitx/conf/fcitx-imselector.config
+~/.config/fcitx/conf/fcitx-clipboard.config
 
 ~/.config/ranger/rc.conf
 ~/.config/ranger/rifle.conf
