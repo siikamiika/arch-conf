@@ -7,6 +7,8 @@ from colored_load import Load
 from colored_cpu import CpuUsage
 from clockv2 import Clock
 from cond_text import Text
+from clipboard import Clipboard
+from selection import Selection
 
 status = Status(standalone=True)
 
@@ -78,6 +80,16 @@ status.register(Text,
     text="GTX 860M:",
     color=NVIDIA,
     condition="nvidia-smi 2>&1 > /dev/null",
+    )
+
+status.register(Clipboard,
+    format="CB: {clipboard}",
+    #color="#FFFFFF",
+    )
+
+status.register(Selection,
+    format="SEL1: {primary}",
+    #color="#FFFFFF",
     )
 
 status.run()

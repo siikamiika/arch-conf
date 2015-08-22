@@ -15,5 +15,7 @@ python-netifaces
 python-pyalsaaudio
 python-pywapi
 ttf-google-fonts-git
+uchardet
+unigine-heaven
 winetricks-git
 yaourt

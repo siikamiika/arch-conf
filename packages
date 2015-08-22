@@ -25,6 +25,7 @@ dialog
 diffutils
 dmenu
 docbook-xsl
+dunst
 e2fsprogs
 empathy
 eog
@@ -92,8 +93,10 @@ i3lock
 i3status
 ibus-qt
 inetutils
+intel-gpu-tools
 iproute2
 iputils
+ipython
 jfsutils
 leafpad
 less
@@ -109,6 +112,7 @@ lib32-sdl
 libtool
 licenses
 linux
+lm_sensors
 logrotate
 lvm2
 m4
@@ -126,8 +130,10 @@ netctl
 nodejs
 ntfs-3g
 nvidia
+openal
 openssh
 os-prober
+otf-ipafont
 pacman
 patch
 pavucontrol
@@ -138,6 +144,7 @@ perl
 pidgin
 pkg-config
 pkgfile
+pm-utils
 powertop
 ppsspp
 primus
@@ -152,6 +159,7 @@ python-lxml
 python-pip
 python-psutil
 python-tornado
+python2-xlib
 qbittorrent
 ranger
 reiserfsprogs
@@ -175,6 +183,7 @@ tk
 totem
 tracker
 ttf-sazanami
+ttf-ubraille
 usbutils
 util-linux
 vapoursynth
@@ -188,6 +197,7 @@ which
 wine
 wpa_supplicant
 xbindkeys
+xclip
 xdg-user-dirs-gtk
 xdotool
 xf86-input-synaptics
@@ -196,8 +206,10 @@ xfsprogs
 xmlto
 xorg-server-utils
 xorg-utils
+xorg-xfontsel
 xorg-xinit
 xorg-xprop
+xsel
 xterm
 yelp
 youtube-dl

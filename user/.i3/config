@@ -152,3 +152,5 @@ bindsym $mod+l exec i3lock-wrapper
 # floating
 for_window [class="Wine"] floating enable
 for_window [class="Pcsx2"] floating enable
+for_window [class="Pavucontrol"] floating enable
+

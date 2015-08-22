@@ -25,5 +25,13 @@
     Control+Alt + Down
 
 ### python-clipmenu
-"python-clipmenu-client"
-    Control+Alt + h
+#"python-clipmenu-client"
+#    Control+Alt + h
+
+### translate
+"gt_notify -tT auto en"
+    Alt+Mod4 + a
+"(gt_play -p mpg123 ja $(xsel -o --primary) &); gt_notify -tT ja en"
+    Alt+Mod4 + j
+"gt_notify -tT en fi"
+    Alt+Mod4 + e
