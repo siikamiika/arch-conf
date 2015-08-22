@@ -20,6 +20,8 @@
 ~/.config/ranger/rc.conf
 ~/.config/ranger/rifle.conf
 
+~/.config/dunst/dunstrc
+
 ~/i3pystatus/colored_cpu.py
 ~/i3pystatus/nvidia_temp.py
 ~/i3pystatus/cond_text.py
