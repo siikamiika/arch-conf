@@ -5,7 +5,6 @@ cssselect
 gt
 html5lib
 i3pystatus
-ipython
 lxml
 git+https://github.com/siikamiika/mpv-python-ipc
 netifaces

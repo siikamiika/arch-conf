@@ -97,7 +97,6 @@ inkscape
 intel-gpu-tools
 iproute2
 iputils
-ipython
 jfsutils
 leafpad
 less
@@ -152,13 +151,14 @@ ppsspp
 primus
 procps-ng
 psmisc
-python-beautifulsoup4
 python-chardet
 python-colorama
 python-cssselect
 python-dbus
+python-decorator
 python-gobject2
 python-lxml
+python-pexpect
 python-pip
 python-psutil
 python-tornado
