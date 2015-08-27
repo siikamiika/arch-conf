@@ -29,9 +29,11 @@
 #    Control+Alt + h
 
 ### translate
-"gt_notify -tT auto en"
+"gt_notify -tTo auto en"
     Alt+Mod4 + a
-"(gt_play -p mpg123 ja $(xsel -o --primary) &); gt_notify -tT ja en"
+"tl-soundnotify ja ja en"
     Alt+Mod4 + j
-"gt_notify -tT en fi"
+"tl-soundnotify en en fi"
     Alt+Mod4 + e
+"~/koodi/language-learning/japanese/scripts/kanjinotify"
+    Shift+Alt+Mod4 + j
