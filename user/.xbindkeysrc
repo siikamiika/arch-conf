@@ -29,11 +29,20 @@
 #    Control+Alt + h
 
 ### translate
+# anything to english
 "gt_notify -tTo auto en"
     Alt+Mod4 + a
-"tl-soundnotify ja ja en"
-    Alt+Mod4 + j
+# english to finnish, with tts
 "tl-soundnotify en en fi"
     Alt+Mod4 + e
+# japanese to english, with tts
+"tl-soundnotify ja ja en"
+    Alt+Mod4 + j
+# kanji
 "~/koodi/language-learning/japanese/scripts/kanjinotify"
     Shift+Alt+Mod4 + j
+"kanjidamage"
+    Shift+Alt+Mod4 + k
+# russian to english, with tts
+"tl-soundnotify ru ru en"
+    Alt+Mod4 + r
