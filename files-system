@@ -15,6 +15,7 @@
 /etc/pacman.conf
 /etc/pulse/daemon.conf
 /etc/udev/rules.d/01-disable-touchpad-with-usb-mouse.rules
+/etc/bash.bashrc
 
 /usr/share/X11/xkb/symbols/autism
 /usr/share/X11/xkb/rules/evdev.xml
