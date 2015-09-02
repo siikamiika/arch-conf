@@ -109,6 +109,7 @@ lib32-ncurses
 lib32-nvidia-utils
 lib32-primus
 lib32-sdl
+libreoffice-fresh
 libtool
 licenses
 linux
@@ -199,7 +200,9 @@ weston
 wget
 which
 wine
+wireshark-gtk
 wpa_supplicant
+xautomation
 xbindkeys
 xclip
 xdg-user-dirs-gtk

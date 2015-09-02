@@ -31,5 +31,4 @@
 ~/i3pystatus/i3pystatus_conf.py
 ~/i3pystatus/pavutoggle.py
 ~/i3pystatus/cpu_temp.py
-~/i3pystatus/selection.py
 ~/i3pystatus/clipboard.py

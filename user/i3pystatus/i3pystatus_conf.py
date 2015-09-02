@@ -7,8 +7,7 @@ from colored_load import Load
 from colored_cpu import CpuUsage
 from clockv2 import Clock
 from cond_text import Text
-from clipboard import Clipboard
-from selection import Selection
+from clipboard import Clipboard, Selection
 
 status = Status(standalone=True)
 
