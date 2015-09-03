@@ -81,6 +81,20 @@ status.register(Text,
     condition="nvidia-smi 2>&1 > /dev/null",
     )
 
+status.register("network",
+    format_up="▼{bytes_recv}k ▲{bytes_sent}k",
+    format_down="",
+    interface="wlp8s0",
+    dynamic_color=False,
+    )
+
+status.register("network",
+    format_up="▼{bytes_recv}k ▲{bytes_sent}k",
+    format_down="",
+    interface="enp9s0",
+    dynamic_color=False,
+    )
+
 status.register(Clipboard,
     format="CB: {buffer}",
     #color="#FFFFFF",
