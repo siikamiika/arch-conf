@@ -46,3 +46,7 @@
 # russian to english, with tts
 "tl-soundnotify ru ru en"
     Alt+Mod4 + r
+
+### screenshot
+"screenshot-area"
+    Control+Shift + 4

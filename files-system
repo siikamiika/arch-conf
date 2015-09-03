@@ -4,6 +4,7 @@
 /usr/local/bin/wine-64
 /usr/local/bin/tl-soundnotify
 /usr/local/bin/kanjidamage
+/usr/local/bin/screenshot-area
 
 /etc/X11/xorg.conf.d/00-keyboard.conf
 /etc/X11/xorg.conf.d/10-monitor.conf
