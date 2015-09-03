@@ -17,31 +17,20 @@ class Clipboard(IntervalModule):
     ]
     color = "#FFFFFF"
     interval = 1
+    cmd = 'xsel -b'
 
     def run(self):
-        self.output = {
-            "full_text": sanitize(self.format.format(
-                clipboard=getoutput('xsel -b').replace('\n', ''),
-                )),
-            "color": self.color,
-        }
+        try:
+            self.output = {
+                "full_text": sanitize(self.format.format(
+                    buffer=getoutput(self.cmd).replace('\n', ''),
+                    )),
+                "color": self.color,
+            }
+        except Exception as e:
+            self.output = {"full_text": str(e)}
 
 
-class Selection(IntervalModule):
+class Selection(Clipboard):
 
-    settings = [
-        "format",
-        "color",
-        "interval",
-    ]
-    color = "#FFFFFF"
-    interval = 1
-
-    def run(self):
-        self.output = {
-            "full_text": sanitize(self.format.format(
-                primary=getoutput('xsel').replace('\n', ''),
-                )),
-            "color": self.color,
-        }
-
+    cmd = 'xsel'

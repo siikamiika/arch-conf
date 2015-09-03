@@ -82,12 +82,12 @@ status.register(Text,
     )
 
 status.register(Clipboard,
-    format="CB: {clipboard}",
+    format="CB: {buffer}",
     #color="#FFFFFF",
     )
 
 status.register(Selection,
-    format="SEL1: {primary}",
+    format="SEL1: {buffer}",
     #color="#FFFFFF",
     )
 
