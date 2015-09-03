@@ -8,6 +8,7 @@ from colored_cpu import CpuUsage
 from clockv2 import Clock
 from cond_text import Text
 from clipboard import Clipboard, Selection
+from touchpad import Touchpad
 
 status = Status(standalone=True)
 
@@ -15,6 +16,10 @@ NVIDIA = "#619701"
 INTEL  = "#0860A7"
 I3BLUE = "#285577"
 TEMP_OK = "#05A600"
+
+status.register(Touchpad,
+
+    )
 
 status.register("battery",
         battery_ident="BAT1",

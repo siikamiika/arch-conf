@@ -32,3 +32,4 @@
 ~/i3pystatus/pavutoggle.py
 ~/i3pystatus/cpu_temp.py
 ~/i3pystatus/clipboard.py
+~/i3pystatus/touchpad.py
