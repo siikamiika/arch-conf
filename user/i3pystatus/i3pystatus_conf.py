@@ -18,7 +18,7 @@ TEMP_OK = "#05A600"
 
 status.register("battery",
         battery_ident="BAT1",
-        format="{percentage:.0f}% {remaining:%E%hh:%Mm}",
+        format="{percentage:.0f}%[ {remaining:%E%hh:%Mm}]",
         color="#ffff00",
         )
 
@@ -26,6 +26,12 @@ status.register(PulseAudio,
     format="♪{volume}{muted}",
     step=2,
     #color=I3BLUE,
+    )
+
+status.register("network",
+    format_up="{essid} ({quality}%) ▼{bytes_recv}k ▲{bytes_sent}k",
+    interface="wlp8s0",
+    dynamic_color=False,
     )
 
 status.register(Clock,
@@ -79,12 +85,6 @@ status.register(Text,
     text="GTX 860M:",
     color=NVIDIA,
     condition="nvidia-smi 2>&1 > /dev/null",
-    )
-
-status.register("network",
-    format_up="▼{bytes_recv}k ▲{bytes_sent}k",
-    interface="wlp8s0",
-    dynamic_color=False,
     )
 
 status.register(Clipboard,
