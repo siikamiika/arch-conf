@@ -3,12 +3,15 @@
 from subprocess import call
 import time
 import os
+from os.path import expanduser as exp_usr
 import sys
+import struct
+import shutil
 
 def sh(cmd):
     return call(cmd, shell=True)
 
-with open(os.path.expanduser('~/.screenshot-area')) as f:
+with open(exp_usr('~/.screenshot-area')) as f:
     lines = f.read().splitlines()
     SSHHOST = lines[0]
     SSHPORT = lines[1]
@@ -25,13 +28,18 @@ thumb = path + grabtime + '-thumb.png'
 url = BROWSERBASE + fn
 
 time.sleep(0.2)
-status = sh('scrot -s -t 20 {}'.format(fullpath))
+status = sh('scrot -s {}'.format(fullpath))
 if status != 0:
     sys.exit(status)
+W, H = struct.unpack('>ii', open(exp_usr(fullpath), 'rb').read(24)[16:24])
+if W > 350:
+    sh('convert {fullpath} -resize 350 {thumb}'.format(**locals()))
+else:
+    shutil.copy(exp_usr(fullpath), exp_usr(thumb))
 sh('sshpass -p \'{SSHPASS}\' scp -P {SSHPORT} {fullpath} {SSHUSER}@{SSHHOST}:{SSHPATH}'.format(
     **locals()))
-sh('notify-send -i {} screenshot'.format(thumb))
+sh('notify-send -i {} \' \''.format(thumb))
 sh('echo {} | xsel -i -p'.format(url))
 sh('echo {} | xsel -i -b'.format(url))
 time.sleep(5)
-os.remove(os.path.expanduser(thumb))
+os.remove(exp_usr(thumb))
