@@ -50,3 +50,7 @@
 ### screenshot
 "screenshot-area"
     Control+Shift + 4
+
+### touchpad
+"touchpadtoggle"
+    Control + Escape

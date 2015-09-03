@@ -18,18 +18,18 @@ TEMP_OK = "#05A600"
 
 status.register("battery",
         battery_ident="BAT1",
-        format="{percentage:.0f}%[ {remaining:%E%hh:%Mm}]",
+        format="{percentage:3.0f}%[ {remaining:%E%hh:%Mm}]",
         color="#ffff00",
         )
 
 status.register(PulseAudio,
-    format="♪{volume}{muted}",
+    format="♪{volume:3}{muted}",
     step=2,
     #color=I3BLUE,
     )
 
 status.register("network",
-    format_up="{essid} ({quality}%) ▼{bytes_recv}k ▲{bytes_sent}k",
+    format_up="{essid} ({quality}%) {bytes_recv:4}k▼ {bytes_sent:4}k▲",
     interface="wlp8s0",
     dynamic_color=False,
     )
