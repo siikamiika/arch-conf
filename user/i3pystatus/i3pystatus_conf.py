@@ -37,13 +37,8 @@ status.register(PulseAudio,
     )
 
 status.register(Clock,
-    format="%X",
-    color="#FFFF80",
-    )
-
-status.register(Clock,
-    format="%a %-d %b %Y, Week %V",
-    interval=10,
+    format1="%X",
+    format2="%a %-d %b %Y",
     color="#FFFF80",
     )
 
