@@ -9,13 +9,14 @@ from threading import Thread
 class Touchpad(Module):
 
     settings = [
-        "format",
+        "text",
         "color_on",
         "color_off",
     ]
     color_on = '#00FF00'
     color_off = '#FF0000'
     socket_file = '/tmp/touchpadtoggle.sock'
+    text = "T"
 
     def init(self):
         self.manual_update()
@@ -37,7 +38,7 @@ class Touchpad(Module):
         try:
             state = getoutput('synclient -l | grep TouchpadOff | awk \'{print $3}\'')
             self.output = {
-                "full_text": '██',
+                "full_text": self.text,
                 "color": self.color_on if state == '0' else self.color_off,
             }
         except Exception as e:

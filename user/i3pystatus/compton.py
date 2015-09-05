@@ -8,10 +8,13 @@ from threading import Thread
 class Compton(Module):
 
     settings = [
-        "format",
+        "text",
         "color",
     ]
     socket_file = '/tmp/compton-status.sock'
+    color_on = '#00FF00'
+    color_off = '#FF0000'
+    text = "C"
 
     def init(self):
         self.manual_update()
@@ -26,9 +29,9 @@ class Compton(Module):
                 c, a = self.listener.accept()
                 data = c.recv(4096).decode().strip()
                 if data == "on":
-                    self.output["full_text"] = "C"
+                    self.output["color"] = self.color_on
                 elif data == "off":
-                    self.output["full_text"] = ""
+                    self.output["color"] = self.color_off
         Thread(target=bg).start()
 
 
@@ -36,7 +39,8 @@ class Compton(Module):
         try:
             state = call(['pgrep', 'compton'], stdout=DEVNULL, stderr=DEVNULL)
             self.output = {
-                "full_text": 'C' if state == 0 else '',
+                "full_text": self.text,
+                "color": self.color_on if state == 0 else self.color_off,
             }
         except Exception as e:
             self.output = {"full_text": str(e)}
