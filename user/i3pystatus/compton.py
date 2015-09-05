@@ -1,21 +1,17 @@
 from i3pystatus import Module
-from subprocess import getoutput
-import re
+from subprocess import call, DEVNULL
 import socket
 import os
 import os.path
 from threading import Thread
 
-class Touchpad(Module):
+class Compton(Module):
 
     settings = [
         "format",
-        "color_on",
-        "color_off",
+        "color",
     ]
-    color_on = '#00FF00'
-    color_off = '#FF0000'
-    socket_file = '/tmp/touchpadtoggle.sock'
+    socket_file = '/tmp/compton-status.sock'
 
     def init(self):
         self.manual_update()
@@ -29,16 +25,18 @@ class Touchpad(Module):
             while True:
                 c, a = self.listener.accept()
                 data = c.recv(4096).decode().strip()
-                self.output["color"] = self.color_on if data == "0" else self.color_off
+                if data == "on":
+                    self.output["full_text"] = "C"
+                elif data == "off":
+                    self.output["full_text"] = ""
         Thread(target=bg).start()
 
 
     def manual_update(self):
         try:
-            state = getoutput('synclient -l | grep TouchpadOff | awk \'{print $3}\'')
+            state = call(['pgrep', 'compton'], stdout=DEVNULL, stderr=DEVNULL)
             self.output = {
-                "full_text": '██',
-                "color": self.color_on if state == '0' else self.color_off,
+                "full_text": 'C' if state == 0 else '',
             }
         except Exception as e:
             self.output = {"full_text": str(e)}

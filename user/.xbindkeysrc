@@ -54,3 +54,7 @@
 ### touchpad
 "touchpadtoggle"
     Control + Escape
+
+### compton
+"(killall compton && (echo off | socat - /tmp/compton-status.sock)) || (compton -b --config ~/.compton.conf && (echo on | socat - /tmp/compton-status.sock))"
+    Alt+Mod4 + F12

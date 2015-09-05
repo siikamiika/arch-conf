@@ -9,6 +9,7 @@ from clockv2 import Clock
 from cond_text import Text
 from clipboard import Clipboard, Selection
 from touchpad_socket import Touchpad
+from compton import Compton
 
 status = Status(standalone=True)
 
@@ -18,6 +19,9 @@ I3BLUE = "#285577"
 TEMP_OK = "#05A600"
 
 status.register(Touchpad,
+    )
+
+status.register(Compton,
     )
 
 status.register("battery",
@@ -32,12 +36,6 @@ status.register(PulseAudio,
     #color=I3BLUE,
     )
 
-status.register("network",
-    format_up="{essid} ({quality}%) {bytes_recv:4}k▼ {bytes_sent:4}k▲",
-    interface="wlp8s0",
-    dynamic_color=False,
-    )
-
 status.register(Clock,
     format="%X",
     color="#FFFF80",
@@ -47,6 +45,12 @@ status.register(Clock,
     format="%a %-d %b %Y, Week %V",
     interval=10,
     color="#FFFF80",
+    )
+
+status.register("network",
+    format_up="{essid} ({quality}%) {bytes_recv:4}k▼ {bytes_sent:4}k▲",
+    interface="wlp8s0",
+    dynamic_color=False,
     )
 
 status.register("mem",

@@ -26,6 +26,7 @@ fcitx -d &
 if [ $(fgconsole) == "2" ]; then
     exec gnome-session
 else
+    exec compton --config ~/.compton.conf -b &
     exec i3
 fi
 
