@@ -10,14 +10,17 @@ function dunno()
     mp.unregister_event(dunno)
 end
 
-local vo_no_compton = "opengl:interpolation"
-local vo_compton = "opengl"
 
-local compton_exists = utils.subprocess({ args={"pgrep", "compton"} }).status
+if not mp.get_property_bool("option-info/vo/set-from-commandline") then
+    local vo_no_compton = "opengl:interpolation"
+    local vo_compton = "opengl"
 
-if compton_exists == 0 then
-    mp.set_property("options/vo", vo_compton)
-else
-    mp.set_property("options/vo", vo_no_compton)
-    mp.register_event('file-loaded', dunno)
+    local compton_exists = utils.subprocess({ args={"pgrep", "compton"} }).status
+
+    if compton_exists == 0 then
+        mp.set_property("options/vo", vo_compton)
+    else
+        mp.set_property("options/vo", vo_no_compton)
+        mp.register_event('file-loaded', dunno)
+    end
 end

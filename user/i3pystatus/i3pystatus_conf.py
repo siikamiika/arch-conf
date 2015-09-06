@@ -44,6 +44,7 @@ status.register("network",
     format_up="{essid} ({quality}%) {bytes_recv:4}k▼ {bytes_sent:4}k▲",
     interface="wlp8s0",
     dynamic_color=False,
+    on_leftclick=None,
     )
 
 status.register("mem",
