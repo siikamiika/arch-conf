@@ -51,9 +51,13 @@
 "screenshot-area"
     Control+Shift + 4
 
-### touchpad
+### touchpad & mouse
 "touchpadtoggle"
     Control + Escape
+"xte 'mouseclick 6'"
+    Shift + b:4
+"xte 'mouseclick 7'"
+    Shift + b:5
 
 ### compton
 "(killall compton && (echo off | socat - /tmp/compton-status.sock)) || (compton -b --config ~/.compton.conf && (echo on | socat - /tmp/compton-status.sock))"
