@@ -37,8 +37,6 @@ status.register(PulseAudio,
     )
 
 status.register(Clock,
-    format1="%X",
-    format2="%a %-d %b %Y",
     color="#FFFF80",
     )
 

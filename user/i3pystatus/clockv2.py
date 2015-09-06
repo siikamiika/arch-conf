@@ -5,8 +5,6 @@ from collections import deque
 class Clock(IntervalModule):
 
     settings = (
-        "format1",
-        "format2",
         "color",
         "interval",
     )
