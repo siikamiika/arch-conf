@@ -7,6 +7,8 @@
 /usr/local/bin/screenshot-area
 /usr/local/bin/touchpadtoggle
 /usr/local/bin/hdmi-toggle
+/usr/local/bin/x
+/usr/local/bin/a
 
 /etc/X11/xorg.conf.d/00-keyboard.conf
 /etc/X11/xorg.conf.d/10-monitor.conf

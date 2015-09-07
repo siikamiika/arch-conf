@@ -1,0 +1,38 @@
+#!/usr/bin/env python3
+
+from subprocess import call
+import os
+from sys import argv
+
+def compress(path, type, level, password):
+    args = [
+            '7z',
+            'a',
+            '-t'+type,
+            '-mx'+str(level),
+        ]
+    if password:
+        args += [
+                '-mhe=on',
+                '-p'+password,
+            ]
+    args += [
+            path+'.'+type,
+            path
+        ]
+    return call(args)
+
+def main():
+    content_path = argv[1]
+    type = '7z'
+    if len(argv) > 2:
+        type = argv[2]
+    password = input('password: ')
+    compress(content_path,
+            type,
+            9,
+            password if password else None,
+        )
+
+if __name__ == '__main__':
+    main()
