@@ -11,6 +11,7 @@
 ~/.mpv/mpv.conf
 ~/.mpv/input.conf
 ~/.mpv/scripts/dunno.lua
+~/.mpv/scripts/manual/mpv-music.lua
 
 ~/.i3/config
 
@@ -36,5 +37,6 @@
 ~/i3pystatus/clipboard.py
 ~/i3pystatus/touchpad_socket.py
 ~/i3pystatus/compton.py
+~/i3pystatus/mpv_music.py
 
 ~/Pictures/black.png

@@ -112,7 +112,7 @@ lib32-ncurses
 lib32-nvidia-utils
 lib32-primus
 lib32-sdl
-libreoffice-fresh
+libreoffice-still
 libtool
 licenses
 linux
@@ -188,6 +188,7 @@ sxiv
 sysfsutils
 systemd-sysvcompat
 tar
+teamspeak3
 terminus-font
 texinfo
 tk

@@ -10,6 +10,7 @@ from cond_text import Text
 from clipboard import Clipboard, Selection
 from touchpad_socket import Touchpad
 from compton import Compton
+from mpv_music import MpvMusic
 
 status = Status(standalone=True)
 
@@ -97,6 +98,9 @@ status.register(Clipboard,
 status.register(Selection,
     format="SEL1: {buffer}",
     #color="#FFFFFF",
+    )
+
+status.register(MpvMusic,
     )
 
 status.run()

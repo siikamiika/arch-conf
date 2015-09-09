@@ -9,6 +9,7 @@
 /usr/local/bin/hdmi-toggle
 /usr/local/bin/x
 /usr/local/bin/a
+/usr/local/bin/socat-arg
 
 /etc/X11/xorg.conf.d/00-keyboard.conf
 /etc/X11/xorg.conf.d/10-monitor.conf
