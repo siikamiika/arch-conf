@@ -18,6 +18,7 @@ NVIDIA = "#619701"
 INTEL  = "#0860A7"
 I3BLUE = "#285577"
 TEMP_OK = "#05A600"
+LIGHT_YELLOW = "#FFFF80"
 
 status.register(Touchpad,
     )
@@ -38,7 +39,7 @@ status.register(PulseAudio,
     )
 
 status.register(Clock,
-    color="#FFFF80",
+    color=LIGHT_YELLOW,
     )
 
 status.register("network",
@@ -101,6 +102,7 @@ status.register(Selection,
     )
 
 status.register(MpvMusic,
+    color=LIGHT_YELLOW,
     )
 
 status.run()

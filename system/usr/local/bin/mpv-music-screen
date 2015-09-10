@@ -1,0 +1,3 @@
+#!/bin/bash
+
+screen -rd `pgrep 'SCREEN mpv-music'`

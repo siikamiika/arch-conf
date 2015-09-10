@@ -1,0 +1,3 @@
+#!/bin/bash
+
+screen mpv --script=~/.mpv/scripts/manual/mpv-music.lua "$@"

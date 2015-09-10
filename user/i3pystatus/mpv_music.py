@@ -3,6 +3,7 @@ import socket
 import os
 import os.path
 from threading import Thread
+from subprocess import Popen
 
 class MpvMusic(Module):
 
@@ -11,6 +12,7 @@ class MpvMusic(Module):
     ]
     socket_file = '/tmp/mpv-music.sock'
     color = "#FFFFFF"
+    on_leftclick = "show_mpv"
 
     def init(self):
 
@@ -31,3 +33,6 @@ class MpvMusic(Module):
                 data = c.recv(4096).decode().strip()
                 self.output["full_text"] = data
         Thread(target=bg).start()
+
+    def show_mpv(self):
+        Popen(["urxvt", "-e", "mpv-music-screen"])
