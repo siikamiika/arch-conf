@@ -6,21 +6,6 @@ function Set(list)
     return set
 end
 
-local completed = false
-local storage_path = nil
-local new_options = {}
-
-local options = Set{
-    'vid',
-    'aid',
-    'sid',
-    'secondary-sid',
-    'audio-delay',
-    'sub-delay',
-    'video-aspect',
-    'volume',
-}
-
 function readAll(file)
     local f = io.open(file, "rb")
     local content = ""
@@ -55,34 +40,73 @@ function script_dir()
    return path
 end
 
+local properties = Set{
+    'vid',
+    'aid',
+    'sid',
+    'secondary-sid',
+    'audio-delay',
+    'sub-delay',
+    'video-aspect',
+    'volume',
+    'vf',
+    'af',
+}
+
+local hook_executed = false
+local storage_path = nil
+local new_properties = {}
+
 mp.add_hook("on_load", 50, function ()
-    if completed then return end
-    for p in pairs(options) do
+    if hook_executed then return end
+
+    for p in pairs(properties) do
         mp.observe_property(p, 'string', function(property, value)
             if value then
-                new_options[property] = value
+                new_properties[property] = value
             end
         end)
     end
-    local path = utils.getcwd()
-    path = utils.join_path(path, mp.get_property('path'))
-    path = utils.split_path(path)
+
+    local network_location = false
+    local media_path = mp.get_property('path')
+    local filename = nil
+
+    for _, protocol in pairs({'http://', 'https://', 'ftp://', 'ytdl://'}) do
+        if media_path:find(protocol) == 1 then
+            network_location = true
+            break
+        end
+    end
+
+    if network_location then
+        filename = 'stream'
+    else
+        local media_dir = utils.getcwd()
+        media_dir = utils.join_path(media_dir, mp.get_property('path'))
+        media_dir = utils.split_path(media_dir)
+        filename = media_dir
+    end
+
     storage_path = utils.join_path(script_dir(), 'dir_conf_storage')
-    storage_path = utils.join_path(storage_path, path:gsub('[\\/:]', '.'))
+    utils.subprocess({args={'mkdir', storage_path}})
+    storage_path = utils.join_path(storage_path, filename:gsub('[\\/:]', '_'))
 
     for line in readAll(storage_path):gmatch("[^\r\n]+") do
         line = line:split("=", 1)
         mp.set_property('options/'..line[1], line[2])
     end
-    completed = true
-end)
 
+    hook_executed = true
+end)
 
 mp.register_event('shutdown', function()
     local file_content = {}
-    for property, value in pairs(new_options) do
+
+    for property, value in pairs(new_properties) do
         file_content[#file_content+1] = property..'='..value
     end
+
     file_content = table.concat(file_content, '\n')
     local f = io.open(storage_path, 'w')
     f:write(file_content)
