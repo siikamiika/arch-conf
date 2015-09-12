@@ -12,6 +12,7 @@
 ~/.mpv/input.conf
 ~/.mpv/scripts/dunno.lua
 ~/.mpv/scripts/manual/mpv-music.lua
+~/.mpv/vs/30fps_judder_fix.py
 
 ~/.i3/config
 
