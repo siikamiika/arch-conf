@@ -1,7 +1,5 @@
 local utils = require("mp.utils")
 
-local vo_compton = "opengl:waitvsync:interpolation"
-
 function dunno()
     mp.add_timeout(1, function()
         mp.commandv('cycle', 'fullscreen')
@@ -16,7 +14,9 @@ end
 if os.getenv('DISPLAY') == ':0' then
     if not mp.get_property_bool("option-info/vo/set-from-commandline") then
         if utils.subprocess({ args={"pgrep", "compton"} }).status == 0 then
-            mp.set_property("options/vo", vo_compton)
+            local vo = mp.get_property('options/vo')
+            vo = vo..':waitvsync'
+            mp.set_property("options/vo", vo)
         else
             local hdmi_connected = os.execute('xrandr | grep "HDMI1 connected"')
             if not hdmi_connected then
