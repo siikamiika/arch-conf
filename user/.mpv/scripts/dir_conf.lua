@@ -1,11 +1,5 @@
 local utils = require('mp.utils')
 
-function Set(list)
-    local set = {}
-    for _, l in ipairs(list) do set[l] = true end
-    return set
-end
-
 function readAll(file)
     local f = io.open(file, "rb")
     local content = ""
@@ -40,17 +34,17 @@ function script_dir()
    return path
 end
 
-local properties = Set{
-    'vid',
-    'aid',
-    'sid',
-    'secondary-sid',
-    'audio-delay',
-    'sub-delay',
-    'video-aspect',
-    'volume',
-    'vf',
-    'af',
+local properties = {
+    ['vid']='auto',
+    ['aid']='auto',
+    ['sid']='auto',
+    ['secondary-sid']='auto',
+    ['audio-delay']='0.0',
+    ['sub-delay']='0.0',
+    ['video-aspect']='-1.0',
+    ['volume']='70.0',
+    ['vf']='',
+    ['af']='',
 }
 
 local hook_executed = false
@@ -100,7 +94,7 @@ mp.add_hook("on_load", 50, function ()
     hook_executed = true
 end)
 
-mp.register_event('shutdown', function()
+function save_properties()
     local file_content = {}
 
     for property, value in pairs(new_properties) do
@@ -110,4 +104,18 @@ mp.register_event('shutdown', function()
     file_content = table.concat(file_content, '\n')
     local f = io.open(storage_path, 'w')
     f:write(file_content)
+end
+
+mp.add_key_binding('Ctrl+d', 'dir_conf_enable', function()
+    mp.register_event('shutdown', save_properties)
+    mp.osd_message('Current properties will be saved for this directory.')
+end)
+
+mp.add_key_binding('Ctrl+D', 'dir_conf_delete', function()
+    mp.unregister_event(save_properties)
+    os.remove(storage_path)
+    for p, v in pairs(properties) do
+        mp.set_property(p, v)
+    end
+    mp.osd_message('Directory specific properties deleted and restored to default values.')
 end)
