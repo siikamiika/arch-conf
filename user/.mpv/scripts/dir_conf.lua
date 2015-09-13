@@ -62,22 +62,23 @@ mp.add_hook("on_load", 50, function ()
         end)
     end
 
-    local network_location = false
+    local protocol = nil
     local media_path = mp.get_property('path')
     local filename = nil
 
-    for _, protocol in pairs({'http://', 'https://', 'ftp://', 'ytdl://'}) do
-        if media_path:find(protocol) == 1 then
-            network_location = true
+    for _, p in pairs({'http://', 'https://', 'ftp://'}) do
+        if media_path:find(p) == 1 then
+            protocol = p
             break
         end
     end
 
-    if network_location then
-        filename = 'stream'
+    if protocol then
+        filename = media_path:sub(protocol:len() + 1)
+        filename = filename:split('/', 1)[1]..'.domain'
     else
         local media_dir = utils.getcwd()
-        media_dir = utils.join_path(media_dir, mp.get_property('path'))
+        media_dir = utils.join_path(media_dir, media_path)
         media_dir = utils.split_path(media_dir)
         filename = media_dir
     end
@@ -106,12 +107,12 @@ function save_properties()
     f:write(file_content)
 end
 
-mp.add_key_binding('Ctrl+d', 'dir_conf_enable', function()
+mp.add_key_binding('F', 'dir_conf_enable', function()
     mp.register_event('shutdown', save_properties)
     mp.osd_message('Current properties will be saved for this directory.')
 end)
 
-mp.add_key_binding('Ctrl+D', 'dir_conf_delete', function()
+mp.add_key_binding('D', 'dir_conf_delete', function()
     mp.unregister_event(save_properties)
     os.remove(storage_path)
     for p, v in pairs(properties) do
