@@ -1,10 +1,10 @@
-urxvt*font: xft:Terminus:pixelsize=14
+urxvt*font: xft:Ubuntu Mono:pixelsize=12
 !urxvt*font: -artwiz-lime.se-*-r-normal-*-10-*-*-*-*-*-*-*
 !urxvt*boldFont: -artwiz-lime.se-*-r-normal-*-10-*-*-*-*-*-*-*
 URxvt*scrollBar: false
 URxvt*internalBorder: 10
 
-!disable an useless keybind
+!disable a useless keybind
 URxvt.iso14755: false
 URxvt.iso14755_52: false
 
