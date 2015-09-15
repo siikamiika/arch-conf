@@ -39,7 +39,7 @@ else:
 sh('sshpass -p \'{SSHPASS}\' scp -P {SSHPORT} {fullpath} {SSHUSER}@{SSHHOST}:{SSHPATH}'.format(
     **locals()))
 sh('notify-send -i {} \' \''.format(thumb))
-sh('echo {} | xsel -i -p'.format(url))
-sh('echo {} | xsel -i -b'.format(url))
+sh('echo -n {} | xsel -i -p'.format(url))
+sh('echo -n {} | xsel -i -b'.format(url))
 time.sleep(5)
 os.remove(exp_usr(thumb))
