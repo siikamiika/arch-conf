@@ -8,8 +8,8 @@ class Clock(IntervalModule):
         "color",
         "interval",
     )
-    format1 = "%X"
-    format2 = "%a %-d %b %Y, Week %V"
+    format1 = "%a %-d %b, %H:%M"
+    format2 = "%a %-d %b %Y, Week %V, %X"
     formats = deque([format1, format2])
     interval = 1
     color = "#FFFFFF"

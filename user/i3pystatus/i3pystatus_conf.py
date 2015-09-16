@@ -43,7 +43,7 @@ status.register(Clock,
     )
 
 status.register("network",
-    format_up="{essid} ({quality}%) {bytes_recv:_>4}k▼ {bytes_sent:_>4}k▲",
+    format_up="{quality} {essid} {bytes_recv:_>4}k▼ {bytes_sent:_>4}k▲",
     interface="wlp8s0",
     dynamic_color=False,
     on_leftclick=None,
@@ -60,7 +60,7 @@ status.register(CpuUsage,
     )
 
 status.register(Load,
-    format="{avg1} {avg5} {avg15}",
+    format="{avg1}",
     color=INTEL,
     )
 
@@ -71,7 +71,7 @@ status.register(CpuTemp,
     )
 
 status.register("text",
-    text="i7-4710HQ:",
+    text="i7-4710HQ",
     color=INTEL,
     )
 
@@ -86,7 +86,7 @@ status.register(NvGpuTemp,
     )
 
 status.register(Text,
-    text="GTX 860M:",
+    text="GTX 860M",
     color=NVIDIA,
     condition="nvidia-smi 2>&1 > /dev/null",
     )
