@@ -1,6 +1,7 @@
 from datetime import datetime
 from i3pystatus import IntervalModule
 from collections import deque
+from subprocess import call
 
 class Clock(IntervalModule):
 
@@ -15,6 +16,7 @@ class Clock(IntervalModule):
     color = "#FFFFFF"
 
     on_leftclick = "change_format"
+    on_rightclick = "agenda"
 
     def run(self):
         self.output = {
@@ -26,3 +28,5 @@ class Clock(IntervalModule):
         self.formats.rotate()
         self.run()
 
+    def agenda(self):
+        call('notify-send -u critical agenda "$(gcalcli --nocolor agenda)"', shell=True)
