@@ -14,6 +14,7 @@
 ~/.mpv/scripts/manual/mpv-music.lua
 ~/.mpv/vs/30fps_judder_fix.py
 ~/.mpv/scripts/dir_conf.lua
+~/.mpv/scripts/stats.lua
 
 ~/.i3/config
 
