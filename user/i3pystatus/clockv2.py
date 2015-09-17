@@ -2,6 +2,7 @@ from datetime import datetime
 from i3pystatus import IntervalModule
 from collections import deque
 from subprocess import call
+from datetime import datetime, timedelta
 
 class Clock(IntervalModule):
 
@@ -29,4 +30,7 @@ class Clock(IntervalModule):
         self.run()
 
     def agenda(self):
-        call('notify-send -u critical agenda "$(gcalcli --nocolor agenda)"', shell=True)
+        call('notify-send -u critical agenda "$(gcalcli --nocolor agenda {} {})"'.format(
+            datetime.now().strftime("%Y-%m-%d"),
+            (datetime.now() + timedelta(days=14)).strftime("%Y-%m-%d")
+            ), shell=True)
