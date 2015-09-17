@@ -24,10 +24,6 @@
 "xbacklight -dec 5"
     Control+Alt + Down
 
-### python-clipmenu
-#"python-clipmenu-client"
-#    Control+Alt + h
-
 ### translate
 # anything to english
 "gt_notify -tTo auto en"
@@ -62,3 +58,21 @@
 ### compton
 "(killall compton && (echo off | socat - /tmp/compton-status.sock)) || (compton -b --config ~/.compton.conf && (echo on | socat - /tmp/compton-status.sock))"
     Alt+Mod4 + F12
+
+### alternate arrow keys and such
+"xvkbd -xsendevent -text '\[Up]'"
+    Alt + k
+"xvkbd -xsendevent -text '\[Down]'"
+    Alt + j
+"xvkbd -xsendevent -text '\[Left]'"
+    Alt + h
+"xvkbd -xsendevent -text '\[Right]'"
+    Alt + l
+"xvkbd -xsendevent -text '\[Page_Up]'"
+    Shift+Alt + i
+"xvkbd -xsendevent -text '\[Page_Down]'"
+    Shift+Alt + k
+"xvkbd -xsendevent -text '\[Home]'"
+    Shift+Alt + u
+"xvkbd -xsendevent -text '\[End]'"
+    Shift+Alt + j
