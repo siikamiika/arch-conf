@@ -5,24 +5,27 @@
 import os
 import webbrowser
 import html
+from sys import argv
 
 def main():
     page = [
         '<!DOCTYPE html>',
-            '<head>',
-                '<meta charset="utf-8">',
-                '<style type="text/css">',
-                    'body {',
-                        'background-color: black;',
-                        'text-align: center;',
-                    '}',
-                '</style>',
-            '</head>',
+        '<head>',
+            '<meta charset="utf-8">',
+            '<style type="text/css">',
+                'body {',
+                    'background-color: black;',
+                    'text-align: center;',
+                '}',
+            '</style>',
+        '</head>',
         '<body>',
         '<!-- Content -->',
     ]
 
-    files = sorted(os.listdir())
+    path = argv[1] if argv[1:] else '.'
+
+    files = sorted(os.listdir(path))
     for f in files:
         f = html.escape(f, quote=True)
         page.append('<p style="color: #237A72;"><a href="#{0}">{0}</a></p>'.format(f))
@@ -35,10 +38,12 @@ def main():
 
     page = '\n'.join(page)
 
-    with open('index.html', 'w', encoding='utf-8') as f:
+    index = os.path.join(path, 'index.html')
+
+    with open(index, 'w', encoding='utf-8') as f:
         f.write(page)
 
-    webbrowser.open_new_tab('index.html')
+    webbrowser.open_new_tab(index)
 
 
 if __name__ == '__main__':
