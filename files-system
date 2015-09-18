@@ -13,7 +13,7 @@
 /usr/local/bin/mpv-music
 /usr/local/bin/mpv-music-screen
 /usr/local/bin/compton-toggle
-
+/usr/local/bin/read-in-browser
 
 /etc/X11/xorg.conf.d/00-keyboard.conf
 /etc/X11/xorg.conf.d/10-monitor.conf

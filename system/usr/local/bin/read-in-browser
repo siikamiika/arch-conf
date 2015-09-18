@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+
+# Concatenate a directory (of images) into index.html and open it in your browser.
+
+import os
+import webbrowser
+import html
+
+def main():
+    page = [
+        '<!DOCTYPE html>',
+            '<head>',
+                '<meta charset="utf-8">',
+                '<style type="text/css">',
+                    'body {',
+                        'background-color: black;',
+                        'text-align: center;',
+                    '}',
+                '</style>',
+            '</head>',
+        '<body>',
+        '<!-- Content -->',
+    ]
+
+    files = sorted(os.listdir())
+    for f in files:
+        f = html.escape(f, quote=True)
+        page.append('<p style="color: #237A72;"><a href="#{0}">{0}</a></p>'.format(f))
+        page.append('<img src="{0}" alt="{0}" id="{0}">'.format(f))
+
+    page += [
+        '<!-- End content -->',
+        '</body>',
+    ]
+
+    page = '\n'.join(page)
+
+    with open('index.html', 'w', encoding='utf-8') as f:
+        f.write(page)
+
+    webbrowser.open_new_tab('index.html')
+
+
+if __name__ == '__main__':
+    main()
