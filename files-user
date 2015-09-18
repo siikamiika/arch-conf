@@ -22,6 +22,10 @@
 ~/.config/fcitx/config
 ~/.config/fcitx/conf/fcitx-imselector.config
 ~/.config/fcitx/conf/fcitx-clipboard.config
+~/.config/fcitx/conf/fcitx-unicode.config
+~/.config/fcitx/conf/fcitx-keyboard.config
+~/.config/fcitx/addon/fcitx-unicode.conf
+~/.config/fcitx/addon/fcitx-clipboard.conf
 
 ~/.config/ranger/rc.conf
 ~/.config/ranger/rifle.conf
