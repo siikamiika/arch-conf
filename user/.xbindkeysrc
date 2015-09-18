@@ -56,7 +56,7 @@
     Shift + b:5
 
 ### compton
-"(killall compton && (echo off | socat - /tmp/compton-status.sock)) || (compton -b --config ~/.compton.conf && (echo on | socat - /tmp/compton-status.sock))"
+"compton-toggle"
     Alt+Mod4 + F12
 
 ### alternate arrow keys and such

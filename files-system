@@ -12,6 +12,7 @@
 /usr/local/bin/socat-arg
 /usr/local/bin/mpv-music
 /usr/local/bin/mpv-music-screen
+/usr/local/bin/compton-toggle
 
 
 /etc/X11/xorg.conf.d/00-keyboard.conf

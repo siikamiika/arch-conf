@@ -1,0 +1,3 @@
+#!/bin/bash
+
+(killall compton && (socat-arg off /tmp/compton-status.sock)) || (compton -b --config ~/.compton.conf && (socat-arg on /tmp/compton-status.sock))
