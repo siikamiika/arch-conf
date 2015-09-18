@@ -69,10 +69,10 @@
 "xvkbd -xsendevent -text '\[Right]'"
     Alt + l
 "xvkbd -xsendevent -text '\[Page_Up]'"
-    Shift+Alt + i
+    Control+Alt + o
 "xvkbd -xsendevent -text '\[Page_Down]'"
-    Shift+Alt + k
+    Control+Alt + l
 "xvkbd -xsendevent -text '\[Home]'"
-    Shift+Alt + u
+    Control+Alt + i
 "xvkbd -xsendevent -text '\[End]'"
-    Shift+Alt + j
+    Control+Alt + k
