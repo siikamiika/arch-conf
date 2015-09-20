@@ -15,7 +15,7 @@
 /usr/local/bin/compton-toggle
 /usr/local/bin/read-in-browser
 
-/etc/fonts/conf.d/10-fuck-nimbus-mono.conf
+/etc/fonts/conf.d/10-fuck-nimbus.conf
 
 /etc/X11/xorg.conf.d/00-keyboard.conf
 /etc/X11/xorg.conf.d/10-monitor.conf
