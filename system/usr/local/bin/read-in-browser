@@ -17,6 +17,9 @@ def main():
                     'background-color: black;',
                     'text-align: center;',
                 '}',
+                'a {',
+                    'color: #237A72;',
+                '}',
             '</style>',
         '</head>',
         '<body>',
@@ -28,7 +31,7 @@ def main():
     files = sorted(os.listdir(path))
     for f in files:
         f = html.escape(f, quote=True)
-        page.append('<p style="color: #237A72;"><a href="#{0}">{0}</a></p>'.format(f))
+        page.append('<p><a href="#{0}">{0}</a></p>'.format(f))
         page.append('<img src="{0}" alt="{0}" id="{0}">'.format(f))
 
     page += [
