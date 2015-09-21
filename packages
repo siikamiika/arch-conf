@@ -138,7 +138,6 @@ nvidia
 openal
 openssh
 os-prober
-otf-ipafont
 pacman
 patch
 pavucontrol
@@ -195,7 +194,6 @@ texinfo
 tk
 totem
 tracker
-ttf-sazanami
 ttf-ubraille
 usbutils
 util-linux

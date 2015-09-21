@@ -10,7 +10,7 @@ URxvt.iso14755_52: false
 
 ! Clickable URLs
 URxvt.perl-ext-common: default,matcher
-URxvt.url-launcher: chromium
+URxvt.url-launcher: firefox
 URxvt.matcher.button: 1
 
 ! Multicolor
