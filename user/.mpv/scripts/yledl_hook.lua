@@ -1,5 +1,5 @@
 local utils = require('mp.utils')
-local BASE = '/tmp/ylestream/'
+local BASE = '/tmp/ylestream/'..tostring(require('socket').gettime())
 
 function string:ends(End)
     return End == '' or self:sub(-End:len()) == End
@@ -15,20 +15,19 @@ mp.add_hook("on_load", 9, function()
         (url:find('http://svenska.yle.fi') == 1) or
         (url:find('http://www.yle.fi') == 1) then
 
-        os.execute('mkdir '..BASE)
-
         mp.register_event('end-file', function()
-            os.execute('kill $(cat '..BASE..'pid)')
+            os.execute('kill $(cat '..BASE..'/pid)')
             os.execute('rm -rf '..BASE)
         end)
 
-        utils.subprocess({args={'yle-stream', url}})
+        utils.subprocess({args={'yle-stream', url, BASE}})
 
         local counter = 0
         while true do
-            local f = io.open(BASE..'ylestream.mp4', 'r')
+            local f = io.open(BASE..'/ylestream.mp4', 'r')
             if f ~= nil then
                 io.close(f)
+                os.execute('sleep 2')
                 break
             end
             counter = counter + 1
@@ -37,7 +36,7 @@ mp.add_hook("on_load", 9, function()
         end
 
         mp.set_property('file-local-options/keep-open', 'yes')
-        mp.set_property('stream-open-filename', BASE..'ylestream.mp4')
+        mp.set_property('stream-open-filename', BASE..'/ylestream.mp4')
 
         function add_subs()
             local files = utils.readdir(BASE, 'files')
