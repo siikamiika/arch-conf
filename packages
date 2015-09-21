@@ -146,6 +146,7 @@ pcmanfm
 pcmciautils
 pcsx2
 perl
+php-mcrypt
 pidgin
 pkg-config
 pkgfile

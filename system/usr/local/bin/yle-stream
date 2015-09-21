@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+nohup yle-dl --protocol hds:youtubedl -o /tmp/ylestream/ylestream.mp4 "$1" 0<&- &>/dev/null &
+echo $! > /tmp/ylestream/pid
