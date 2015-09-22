@@ -51,6 +51,9 @@
 # spanish to english, with tts
 "tl-soundnotify es es en"
     Alt+Mod4 + w
+# french to english, with tts
+"tl-soundnotify fr fr en"
+    Alt+Mod4 + f
 
 ### screenshot
 "screenshot-area"
