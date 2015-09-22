@@ -42,6 +42,15 @@
 # russian to english, with tts
 "tl-soundnotify ru ru en"
     Alt+Mod4 + r
+# swedish to english, with tts
+"tl-soundnotify sv sv en"
+    Alt+Mod4 + s
+# german to english, with tts
+"tl-soundnotify de de en"
+    Alt+Mod4 + d
+# spanish to english, with tts
+"tl-soundnotify es es en"
+    Alt+Mod4 + w
 
 ### screenshot
 "screenshot-area"
