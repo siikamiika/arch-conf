@@ -14,6 +14,9 @@ fi
 ### xbindkeys
 xbindkeys &
 
+### xcape
+xcape -e 'Shift_L=Escape' &
+
 ### python-clipmenu
 #python-clipmenu-daemon &
 
