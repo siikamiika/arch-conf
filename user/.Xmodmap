@@ -1,1 +1,3 @@
 keycode 135 = Hiragana_Katakana NoSymbol Hiragana_Katakana NoSymbol Hiragana_Katakana
+clear Lock
+keycode 66 = Escape Caps_Lock
