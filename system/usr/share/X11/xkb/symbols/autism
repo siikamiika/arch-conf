@@ -33,19 +33,19 @@ xkb_symbols "basic" {
     key <AD01> { [	   q,          Q,    adiaeresis,       Adiaeresis ] };
     key <AD02> {
         type = "EIGHT_LEVEL_ALPHABETIC",
-        Symbols[Group1] = [ w, W, aring, Aring, 7 ]
+        Symbols[Group1] = [ w, W, 7, 7, 7 ]
     };
     key <AD03> {
         type = "EIGHT_LEVEL_ALPHABETIC",
-        Symbols[Group1] = [ e, E, eacute, Eacute, 8 ]
+        Symbols[Group1] = [ e, E, 8, 8, 8 ]
     };
     key <AD04> {
         type = "EIGHT_LEVEL_ALPHABETIC",
-        Symbols[Group1] = [ r, R, ediaeresis, Ediaeresis, 9 ]
+        Symbols[Group1] = [ r, R, 9, 9, 9 ]
     };
     key <AD05> {
         type = "EIGHT_LEVEL_ALPHABETIC",
-        Symbols[Group1] = [ t, T, thorn, THORN, minus ]
+        Symbols[Group1] = [ t, T, minus, minus, minus ]
     };
     key <AD06> { [	   y,          Y,    udiaeresis,       Udiaeresis ] };
     key <AD07> { [	   u,          U,        uacute,           Uacute ] };
@@ -64,35 +64,35 @@ xkb_symbols "basic" {
     key <AC01> { [	   a,          A,        aacute,           Aacute ] };
     key <AC02> {
         type = "EIGHT_LEVEL_ALPHABETIC",
-        Symbols[Group1] = [ s, S, ssharp, section, 4 ]
+        Symbols[Group1] = [ s, S, 4, section, 4 ]
     };
     key <AC03> {
         type = "EIGHT_LEVEL_ALPHABETIC",
-        Symbols[Group1] = [ d, D, eth, ETH, 5 ]
+        Symbols[Group1] = [ d, D, 5, ETH, 5 ]
     };
     key <AC04> {
         type = "EIGHT_LEVEL_ALPHABETIC",
-        Symbols[Group1] = [ f, F, f, F, 6 ]
+        Symbols[Group1] = [ f, F, 6, 6, 6 ]
     };
     key <AC05> {
         type = "EIGHT_LEVEL_ALPHABETIC",
-        Symbols[Group1] = [ g, G, g, G, plus ]
+        Symbols[Group1] = [ g, G, plus, plus, plus ]
     };
     key <AC06> {
         type = "EIGHT_LEVEL_ALPHABETIC",
-        Symbols[Group1] = [ h, H, h, H, Left]
+        Symbols[Group1] = [ h, H, Left, Left, Left]
     };
     key <AC07> {
         type = "EIGHT_LEVEL_ALPHABETIC",
-        Symbols[Group1] = [ j, J, idiaeresis, Idiaeresis, Down ]
+        Symbols[Group1] = [ j, J, Down, Down, Down ]
     };
     key <AC08> {
         type = "EIGHT_LEVEL_ALPHABETIC",
-        Symbols[Group1] = [ k, K, oe, OE, Up ]
+        Symbols[Group1] = [ k, K, Up, Up, Up ]
     };
     key <AC09> {
         type = "EIGHT_LEVEL_ALPHABETIC",
-        Symbols[Group1] = [ l, L, oslash, Ooblique, Right ]
+        Symbols[Group1] = [ l, L, Right, Right, Right ]
     };
     key <AC10> {
         type = "EIGHT_LEVEL",
@@ -105,23 +105,23 @@ xkb_symbols "basic" {
 
     key <AB01> {
         type = "EIGHT_LEVEL_ALPHABETIC",
-        Symbols[Group1] = [ z, Z, ae, AE, 0 ]
+        Symbols[Group1] = [ z, Z, 0, 0, 0 ]
     };
     key <AB02> {
         type = "EIGHT_LEVEL_ALPHABETIC",
-        Symbols[Group1] = [ x, X, oe, OE, 1 ]
+        Symbols[Group1] = [ x, X, 1, 1, 1 ]
     };
     key <AB03> {
         type = "EIGHT_LEVEL_ALPHABETIC",
-        Symbols[Group1] = [ c, C, copyright, cent, 2 ]
+        Symbols[Group1] = [ c, C, 2, copyright, 2 ]
     };
     key <AB04> {
         type = "EIGHT_LEVEL_ALPHABETIC",
-        Symbols[Group1] = [ v, V, registered, registered, 3 ]
+        Symbols[Group1] = [ v, V, 3, registered, 3 ]
     };
     key <AB05> {
         type = "EIGHT_LEVEL_ALPHABETIC",
-        Symbols[Group1] = [ b, B, b, B, period ]
+        Symbols[Group1] = [ b, B, period, comma, period, comma ]
     };
     key <AB06> { [	   n,          N,        ntilde,           Ntilde ] };
     key <AB07> { [	   m,          M,            mu,               mu ] };
