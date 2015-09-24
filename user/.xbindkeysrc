@@ -70,21 +70,3 @@
 ### compton
 "compton-toggle"
     Alt+Mod4 + F12
-
-### alternate arrow keys and such
-"xvkbd -xsendevent -text '\[Up]'"
-    Alt + k
-"xvkbd -xsendevent -text '\[Down]'"
-    Alt + j
-"xvkbd -xsendevent -text '\[Left]'"
-    Alt + h
-"xvkbd -xsendevent -text '\[Right]'"
-    Alt + l
-"xvkbd -xsendevent -text '\[Page_Up]'"
-    Control+Alt + o
-"xvkbd -xsendevent -text '\[Page_Down]'"
-    Control+Alt + l
-"xvkbd -xsendevent -text '\[Home]'"
-    Control+Alt + i
-"xvkbd -xsendevent -text '\[End]'"
-    Control+Alt + k

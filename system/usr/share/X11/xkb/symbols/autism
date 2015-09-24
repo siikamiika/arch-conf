@@ -28,8 +28,14 @@ xkb_symbols "basic" {
     key <AD07> { [	   u,          U,        uacute,           Uacute ] };
     key <AD08> { [	   i,          I,        iacute,           Iacute ] };
     key <AD09> { [	   o,          O,        oacute,           Oacute ] };
-    key <AD10> { [	   p,          P,    odiaeresis,       Odiaeresis ] };
-    key <AD11> { [ bracketleft,  braceleft,  guillemotleft, leftdoublequotemark ] };
+    key <AD10> {
+        type = "EIGHT_LEVEL_ALPHABETIC",
+        Symbols[Group1] = [ p, P, odiaeresis, Odiaeresis, Home ]
+    };
+    key <AD11> {
+        type = "EIGHT_LEVEL",
+        Symbols[Group1] = [ bracketleft,  braceleft,  guillemotleft, leftdoublequotemark, Prior ]
+    };
     key <AD12> { [bracketright, braceright, guillemotright, rightdoublequotemark ] };
 
     key <AC01> { [	   a,          A,        aacute,           Aacute ] };
@@ -37,12 +43,30 @@ xkb_symbols "basic" {
     key <AC03> { [	   d,          D,           eth,              ETH ] };
     key <AC04> { [	   f,          F,             f,                F ] };
     key <AC05> { [	   g,          G,             g,                G ] };
-    key <AC06> { [	   h,          H,             h,                H ] };
-    key <AC07> { [        j, J,           idiaeresis,   Idiaeresis      ] };
-    key <AC08> { [	   k,          K,            oe,               OE ] };
-    key <AC09> { [	   l,          L,        oslash,         Ooblique ] };
-    key <AC10> { [ semicolon,      colon,     paragraph,           degree ] };
-    key <AC11> { [apostrophe,quotedbl,    dead_acute,   dead_diaeresis  ] };
+    key <AC06> {
+        type = "EIGHT_LEVEL_ALPHABETIC",
+        Symbols[Group1] = [ h, H, h, H, Left]
+    };
+    key <AC07> {
+        type = "EIGHT_LEVEL_ALPHABETIC",
+        Symbols[Group1] = [ j, J, idiaeresis, Idiaeresis, Down ]
+    };
+    key <AC08> {
+        type = "EIGHT_LEVEL_ALPHABETIC",
+        Symbols[Group1] = [ k, K, oe, OE, Up ]
+    };
+    key <AC09> {
+        type = "EIGHT_LEVEL_ALPHABETIC",
+        Symbols[Group1] = [ l, L, oslash, Ooblique, Right ]
+    };
+    key <AC10> {
+        type = "EIGHT_LEVEL",
+        Symbols[Group1] = [ semicolon, colon, paragraph, degree, End ]
+    };
+    key <AC11> {
+        type = "EIGHT_LEVEL",
+        Symbols[Group1] = [ apostrophe, quotedbl, dead_acute, dead_diaeresis, Next ]
+    };
 
     key <AB01> { [	   z,          Z,            ae,               AE ] };
     key <AB02> { [        x, X,           oe,           OE              ] };
@@ -58,7 +82,17 @@ xkb_symbols "basic" {
 
     key <LSGT> {    [   adiaeresis, Adiaeresis, odiaeresis, Odiaeresis  ]   };
 
+    key <CAPS> {
+        symbols[Group1] = [ Escape, Caps_Lock, ISO_Level5_Lock ],
+        actions[Group1] = [ NoAction(), LockMods(modifiers=Lock), LockMods(modifiers=NumLock) ]
+    };
+
     include "level3(ralt_switch)"
+    replace key <MDSW> {
+        type[Group1] = "ONE_LEVEL",
+        symbols[Group1] = [ ISO_Level5_Shift ]
+    };
+    modifier_map Mod2 { <MDSW> };
 };
 
 partial alphanumeric_keys
