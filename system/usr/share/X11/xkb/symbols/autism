@@ -8,8 +8,20 @@ xkb_symbols "basic" {
     key <TLDE> { [    grave, asciitilde,  dead_grave,   dead_tilde      ] };
     key <AE01> { [        1, exclam,      onesuperior,  exclamdown      ] };
     key <AE02> { [	   2,         at,   twosuperior, dead_doubleacute ] };
-    key <AE03> { [	   3, numbersign, threesuperior,      dead_macron ] };
+    key <AE02> {
+        type = "EIGHT_LEVEL",
+        symbols[Group1] = [ 2, at, twosuperior, dead_doubleacute, NumLock ],
+        actions[Group1] = [ NoAction(), NoAction(), NoAction(), NoAction(), LockMods(modifiers=NumLock) ]
+    };
+    key <AE03> {
+        type = "EIGHT_LEVEL",
+        Symbols[Group1] = [ 3, numbersign, threesuperior, dead_macron, slash]
+    };
     key <AE04> { [	   4,     dollar,      currency,         sterling ] };
+    key <AE04> {
+        type = "EIGHT_LEVEL",
+        Symbols[Group1] = [ 4, dollar, currency, sterling, asterisk ]
+    };
     key <AE05> { [	   5,    percent,      EuroSign,     dead_cedilla ] };
     key <AE06> { [        6, asciicircum, dead_circumflex, onequarter    ] };
     key <AE07> { [        7, ampersand,   dead_horn,       onehalf       ] };
@@ -20,10 +32,22 @@ xkb_symbols "basic" {
     key <AE12> { [     equal,       plus,      multiply,         division ] };
 
     key <AD01> { [	   q,          Q,    adiaeresis,       Adiaeresis ] };
-    key <AD02> { [	   w,          W,         aring,            Aring ] };
-    key <AD03> { [	   e,          E,        eacute,           Eacute ] };
-    key <AD04> { [        r, R,           ediaeresis,   Ediaeresis      ] };
-    key <AD05> { [	   t,          T,         thorn,            THORN ] };
+    key <AD02> {
+        type = "EIGHT_LEVEL_ALPHABETIC",
+        Symbols[Group1] = [ w, W, aring, Aring, 7 ]
+    };
+    key <AD03> {
+        type = "EIGHT_LEVEL_ALPHABETIC",
+        Symbols[Group1] = [ e, E, eacute, Eacute, 8 ]
+    };
+    key <AD04> {
+        type = "EIGHT_LEVEL_ALPHABETIC",
+        Symbols[Group1] = [ r, R, ediaeresis, Ediaeresis, 9 ]
+    };
+    key <AD05> {
+        type = "EIGHT_LEVEL_ALPHABETIC",
+        Symbols[Group1] = [ t, T, thorn, THORN, minus ]
+    };
     key <AD06> { [	   y,          Y,    udiaeresis,       Udiaeresis ] };
     key <AD07> { [	   u,          U,        uacute,           Uacute ] };
     key <AD08> { [	   i,          I,        iacute,           Iacute ] };
@@ -39,10 +63,22 @@ xkb_symbols "basic" {
     key <AD12> { [bracketright, braceright, guillemotright, rightdoublequotemark ] };
 
     key <AC01> { [	   a,          A,        aacute,           Aacute ] };
-    key <AC02> { [	   s,          S,        ssharp,          section ] };
-    key <AC03> { [	   d,          D,           eth,              ETH ] };
-    key <AC04> { [	   f,          F,             f,                F ] };
-    key <AC05> { [	   g,          G,             g,                G ] };
+    key <AC02> {
+        type = "EIGHT_LEVEL_ALPHABETIC",
+        Symbols[Group1] = [ s, S, ssharp, section, 4 ]
+    };
+    key <AC03> {
+        type = "EIGHT_LEVEL_ALPHABETIC",
+        Symbols[Group1] = [ d, D, eth, ETH, 5 ]
+    };
+    key <AC04> {
+        type = "EIGHT_LEVEL_ALPHABETIC",
+        Symbols[Group1] = [ f, F, f, F, 6 ]
+    };
+    key <AC05> {
+        type = "EIGHT_LEVEL_ALPHABETIC",
+        Symbols[Group1] = [ g, G, g, G, plus ]
+    };
     key <AC06> {
         type = "EIGHT_LEVEL_ALPHABETIC",
         Symbols[Group1] = [ h, H, h, H, Left]
@@ -68,11 +104,26 @@ xkb_symbols "basic" {
         Symbols[Group1] = [ apostrophe, quotedbl, dead_acute, dead_diaeresis, Next ]
     };
 
-    key <AB01> { [	   z,          Z,            ae,               AE ] };
-    key <AB02> { [        x, X,           oe,           OE              ] };
-    key <AB03> { [	   c,          C,     copyright,             cent ] };
-    key <AB04> { [        v, V,           registered,   registered      ] };
-    key <AB05> { [	   b,          B,             b,                B ] };
+    key <AB01> {
+        type = "EIGHT_LEVEL_ALPHABETIC",
+        Symbols[Group1] = [ z, Z, ae, AE, 0 ]
+    };
+    key <AB02> {
+        type = "EIGHT_LEVEL_ALPHABETIC",
+        Symbols[Group1] = [ x, X, oe, OE, 1 ]
+    };
+    key <AB03> {
+        type = "EIGHT_LEVEL_ALPHABETIC",
+        Symbols[Group1] = [ c, C, copyright, cent, 2 ]
+    };
+    key <AB04> {
+        type = "EIGHT_LEVEL_ALPHABETIC",
+        Symbols[Group1] = [ v, V, registered, registered, 3 ]
+    };
+    key <AB05> {
+        type = "EIGHT_LEVEL_ALPHABETIC",
+        Symbols[Group1] = [ b, B, b, B, period ]
+    };
     key <AB06> { [	   n,          N,        ntilde,           Ntilde ] };
     key <AB07> { [	   m,          M,            mu,               mu ] };
     key <AB08> { [     comma,       less,      ccedilla,         Ccedilla ] };
