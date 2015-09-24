@@ -7,17 +7,16 @@ xkb_symbols "basic" {
 
     key <TLDE> { [    grave, asciitilde,  dead_grave,   dead_tilde      ] };
     key <AE01> { [        1, exclam,      onesuperior,  exclamdown      ] };
-    key <AE02> { [	   2,         at,   twosuperior, dead_doubleacute ] };
     key <AE02> {
         type = "EIGHT_LEVEL",
-        symbols[Group1] = [ 2, at, twosuperior, dead_doubleacute, NumLock ],
-        actions[Group1] = [ NoAction(), NoAction(), NoAction(), NoAction(), LockMods(modifiers=NumLock) ]
+        symbols[Group1] = [ 2, at, NumLock, dead_doubleacute, NumLock, NoSymbol, NumLock, NoSymbol ],
+        actions[Group1] = [ NoAction(), NoAction(), LockMods(modifiers=NumLock), NoAction(),
+            LockMods(modifiers=NumLock), NoAction(), LockMods(modifiers=NumLock), NoAction() ]
     };
     key <AE03> {
         type = "EIGHT_LEVEL",
-        Symbols[Group1] = [ 3, numbersign, threesuperior, dead_macron, slash]
+        Symbols[Group1] = [ 3, numbersign, threesuperior, dead_macron, slash ]
     };
-    key <AE04> { [	   4,     dollar,      currency,         sterling ] };
     key <AE04> {
         type = "EIGHT_LEVEL",
         Symbols[Group1] = [ 4, dollar, currency, sterling, asterisk ]
