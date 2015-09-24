@@ -5,8 +5,9 @@ xkb_symbols "basic" {
 
     name[Group1]= "Autism (US)";
 
-    key <TLDE> { [    grave, asciitilde,  dead_grave,   dead_tilde      ] };
-    key <AE01> { [        1, exclam,      onesuperior,  exclamdown      ] };
+    // top row (numbers)
+    key <TLDE> { [ grave, asciitilde, dead_grave, dead_tilde ] };
+    key <AE01> { [ 1, exclam, onesuperior, exclamdown ] };
     key <AE02> {
         type = "EIGHT_LEVEL",
         symbols[Group1] = [ 2, at, NumLock, dead_doubleacute, NumLock, NoSymbol, NumLock, NoSymbol ],
@@ -19,119 +20,122 @@ xkb_symbols "basic" {
     };
     key <AE04> {
         type = "EIGHT_LEVEL",
-        Symbols[Group1] = [ 4, dollar, currency, sterling, asterisk ]
+        Symbols[Group1] = [ 4, dollar, sterling, currency, asterisk ]
     };
-    key <AE05> { [	   5,    percent,      EuroSign,     dead_cedilla ] };
-    key <AE06> { [        6, asciicircum, dead_circumflex, onequarter    ] };
-    key <AE07> { [        7, ampersand,   dead_horn,       onehalf       ] };
-    key <AE08> { [        8, asterisk,    dead_ogonek,     threequarters ] };
-    key <AE09> { [	   9,  parenleft, leftsinglequotemark, dead_breve ] };
-    key <AE10> { [	   0, parenright, rightsinglequotemark, dead_abovering ] };
-    key <AE11> { [     minus, underscore,           yen,    dead_belowdot ] };
-    key <AE12> { [     equal,       plus,      multiply,         division ] };
+    key <AE05> { [ 5, percent, EuroSign, dead_cedilla ] };
+    key <AE06> { [ 6, asciicircum, dead_circumflex, onequarter ] };
+    key <AE07> { [ 7, ampersand, dead_horn, onehalf ] };
+    key <AE08> { [ 8, asterisk, dead_ogonek, threequarters ] };
+    key <AE09> { [ 9, parenleft, leftsinglequotemark, dead_breve ] };
+    key <AE10> { [ 0, parenright, rightsinglequotemark, dead_abovering ] };
+    key <AE11> { [ minus, underscore, yen, dead_belowdot ] };
+    key <AE12> { [ equal, plus, multiply, division ] };
 
-    key <AD01> { [	   q,          Q,    adiaeresis,       Adiaeresis ] };
+    // first letter row
+    key <AD01> { [ q, Q, aring, Aring ] };
     key <AD02> {
-        type = "EIGHT_LEVEL_ALPHABETIC",
+        type = "EIGHT_LEVEL_SEMIALPHABETIC",
         Symbols[Group1] = [ w, W, 7, 7, 7 ]
     };
     key <AD03> {
-        type = "EIGHT_LEVEL_ALPHABETIC",
+        type = "EIGHT_LEVEL_SEMIALPHABETIC",
         Symbols[Group1] = [ e, E, 8, 8, 8 ]
     };
     key <AD04> {
-        type = "EIGHT_LEVEL_ALPHABETIC",
+        type = "EIGHT_LEVEL_SEMIALPHABETIC",
         Symbols[Group1] = [ r, R, 9, 9, 9 ]
     };
     key <AD05> {
-        type = "EIGHT_LEVEL_ALPHABETIC",
+        type = "EIGHT_LEVEL_SEMIALPHABETIC",
         Symbols[Group1] = [ t, T, minus, minus, minus ]
     };
-    key <AD06> { [	   y,          Y,    udiaeresis,       Udiaeresis ] };
-    key <AD07> { [	   u,          U,        uacute,           Uacute ] };
-    key <AD08> { [	   i,          I,        iacute,           Iacute ] };
-    key <AD09> { [	   o,          O,        oacute,           Oacute ] };
+    key <AD06> { [ y, Y, udiaeresis, Udiaeresis ] };
+    key <AD07> { [ u, U, uacute, Uacute ] };
+    key <AD08> { [ i, I, iacute, Iacute ] };
+    key <AD09> { [ o, O, odiaeresis, Odiaeresis ] };
     key <AD10> {
-        type = "EIGHT_LEVEL_ALPHABETIC",
-        Symbols[Group1] = [ p, P, odiaeresis, Odiaeresis, Home ]
+        type = "EIGHT_LEVEL_SEMIALPHABETIC",
+        Symbols[Group1] = [ p, P, Home, Home, Home ]
     };
     key <AD11> {
         type = "EIGHT_LEVEL",
-        Symbols[Group1] = [ bracketleft,  braceleft,  guillemotleft, leftdoublequotemark, Prior ]
+        Symbols[Group1] = [ bracketleft, braceleft, guillemotleft, leftdoublequotemark, Prior ]
     };
-    key <AD12> { [bracketright, braceright, guillemotright, rightdoublequotemark ] };
+    key <AD12> { [ bracketright, braceright, guillemotright, rightdoublequotemark ] };
 
-    key <AC01> { [	   a,          A,        aacute,           Aacute ] };
+    // second letter row
+    key <AC01> { [ a, A, adiaeresis, Adiaeresis ] };
     key <AC02> {
-        type = "EIGHT_LEVEL_ALPHABETIC",
+        type = "EIGHT_LEVEL_SEMIALPHABETIC",
         Symbols[Group1] = [ s, S, 4, section, 4 ]
     };
     key <AC03> {
-        type = "EIGHT_LEVEL_ALPHABETIC",
+        type = "EIGHT_LEVEL_SEMIALPHABETIC",
         Symbols[Group1] = [ d, D, 5, ETH, 5 ]
     };
     key <AC04> {
-        type = "EIGHT_LEVEL_ALPHABETIC",
+        type = "EIGHT_LEVEL_SEMIALPHABETIC",
         Symbols[Group1] = [ f, F, 6, 6, 6 ]
     };
     key <AC05> {
-        type = "EIGHT_LEVEL_ALPHABETIC",
+        type = "EIGHT_LEVEL_SEMIALPHABETIC",
         Symbols[Group1] = [ g, G, plus, plus, plus ]
     };
     key <AC06> {
-        type = "EIGHT_LEVEL_ALPHABETIC",
+        type = "EIGHT_LEVEL_SEMIALPHABETIC",
         Symbols[Group1] = [ h, H, Left, Left, Left]
     };
     key <AC07> {
-        type = "EIGHT_LEVEL_ALPHABETIC",
+        type = "EIGHT_LEVEL_SEMIALPHABETIC",
         Symbols[Group1] = [ j, J, Down, Down, Down ]
     };
     key <AC08> {
-        type = "EIGHT_LEVEL_ALPHABETIC",
+        type = "EIGHT_LEVEL_SEMIALPHABETIC",
         Symbols[Group1] = [ k, K, Up, Up, Up ]
     };
     key <AC09> {
-        type = "EIGHT_LEVEL_ALPHABETIC",
+        type = "EIGHT_LEVEL_SEMIALPHABETIC",
         Symbols[Group1] = [ l, L, Right, Right, Right ]
     };
     key <AC10> {
         type = "EIGHT_LEVEL",
-        Symbols[Group1] = [ semicolon, colon, paragraph, degree, End ]
+        Symbols[Group1] = [ semicolon, colon, End, degree, End ]
     };
     key <AC11> {
         type = "EIGHT_LEVEL",
         Symbols[Group1] = [ apostrophe, quotedbl, dead_acute, dead_diaeresis, Next ]
     };
 
+    // bottom letter row
+    key <LSGT> { [ adiaeresis, Adiaeresis, odiaeresis, Odiaeresis ] };
     key <AB01> {
-        type = "EIGHT_LEVEL_ALPHABETIC",
+        type = "EIGHT_LEVEL_SEMIALPHABETIC",
         Symbols[Group1] = [ z, Z, 0, 0, 0 ]
     };
     key <AB02> {
-        type = "EIGHT_LEVEL_ALPHABETIC",
+        type = "EIGHT_LEVEL_SEMIALPHABETIC",
         Symbols[Group1] = [ x, X, 1, 1, 1 ]
     };
     key <AB03> {
-        type = "EIGHT_LEVEL_ALPHABETIC",
+        type = "EIGHT_LEVEL_SEMIALPHABETIC",
         Symbols[Group1] = [ c, C, 2, copyright, 2 ]
     };
     key <AB04> {
-        type = "EIGHT_LEVEL_ALPHABETIC",
+        type = "EIGHT_LEVEL_SEMIALPHABETIC",
         Symbols[Group1] = [ v, V, 3, registered, 3 ]
     };
     key <AB05> {
-        type = "EIGHT_LEVEL_ALPHABETIC",
+        type = "EIGHT_LEVEL_SEMIALPHABETIC",
         Symbols[Group1] = [ b, B, period, comma, period, comma ]
     };
-    key <AB06> { [	   n,          N,        ntilde,           Ntilde ] };
-    key <AB07> { [	   m,          M,            mu,               mu ] };
-    key <AB08> { [     comma,       less,      ccedilla,         Ccedilla ] };
-    key <AB09> { [    period,    greater, dead_abovedot,       dead_caron ] };
-    key <AB10> { [     slash,   question,  questiondown,        dead_hook ] };
-    key <BKSL> { [ backslash,        bar,       notsign,        brokenbar ] };
+    key <AB06> { [ n, N, ntilde, Ntilde ] };
+    key <AB07> { [ m, M, mu, mu ] };
+    key <AB08> { [ comma, less, ccedilla, Ccedilla ] };
+    key <AB09> { [ period, greater, dead_abovedot, dead_caron ] };
+    key <AB10> { [ slash, question, questiondown, dead_hook ] };
+    key <BKSL> { [ backslash, bar, notsign, brokenbar ] };
 
-    key <LSGT> {    [   adiaeresis, Adiaeresis, odiaeresis, Odiaeresis  ]   };
-
+    // misc
     key <CAPS> {
         symbols[Group1] = [ Escape, Caps_Lock, ISO_Level5_Lock ],
         actions[Group1] = [ NoAction(), LockMods(modifiers=Lock), LockMods(modifiers=NumLock) ]
@@ -150,5 +154,5 @@ xkb_symbols "fcitx-hack" {
 
     include "autism(basic)"
 
-    name[Group1]="Autism (US, fcitx hack)";
+    name[Group1] = "Autism (US, fcitx hack)";
 };
