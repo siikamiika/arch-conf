@@ -59,9 +59,10 @@ xkb_symbols "basic" {
     };
     key <AD11> {
         type = "EIGHT_LEVEL",
-        Symbols[Group1] = [ bracketleft, braceleft, guillemotleft, leftdoublequotemark, Prior, Prior, Prior, Prior ]
+        Symbols[Group1] = [ bracketleft, braceleft, Prior, Prior, Prior, Prior, Prior, Prior ]
     };
-    key <AD12> { [ bracketright, braceright, guillemotright, rightdoublequotemark ] };
+    key <AD12> { [ bracketright, braceright, dead_acute, dead_diaeresis ] };
+    key <BKSL> { [ backslash, bar, notsign, brokenbar ] };
 
     // second letter row
     key <AC01> { [ a, A, adiaeresis, Adiaeresis ] };
@@ -103,7 +104,7 @@ xkb_symbols "basic" {
     };
     key <AC11> {
         type = "EIGHT_LEVEL",
-        Symbols[Group1] = [ apostrophe, quotedbl, dead_acute, dead_diaeresis, Next, Next, Next, Next ]
+        Symbols[Group1] = [ apostrophe, quotedbl, Next, Next, Next, Next, Next, Next ]
     };
 
     // bottom letter row
@@ -133,7 +134,6 @@ xkb_symbols "basic" {
     key <AB08> { [ comma, less, ccedilla, Ccedilla ] };
     key <AB09> { [ period, greater, dead_abovedot, dead_caron ] };
     key <AB10> { [ slash, question, questiondown, dead_hook ] };
-    key <BKSL> { [ backslash, bar, notsign, brokenbar ] };
 
     // misc
     key <CAPS> {
