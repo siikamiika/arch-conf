@@ -50,8 +50,14 @@ xkb_symbols "basic" {
         Symbols[Group1] = [ t, T, minus, minus, minus, minus, minus, minus ]
     };
     key <AD06> { [ y, Y, udiaeresis, Udiaeresis ] };
-    key <AD07> { [ u, U, uacute, Uacute ] };
-    key <AD08> { [ i, I, iacute, Iacute ] };
+    key <AD07> {
+        type = "EIGHT_LEVEL_SEMIALPHABETIC",
+        Symbols[Group1] = [ u, U, Delete, Delete, Delete, Delete, Delete, Delete ]
+    };
+    key <AD08> {
+        type = "EIGHT_LEVEL_SEMIALPHABETIC",
+        Symbols[Group1] = [ i, I, Insert, Insert, Insert, Insert, Insert, Insert ]
+    };
     key <AD09> { [ o, O, odiaeresis, Odiaeresis ] };
     key <AD10> {
         type = "EIGHT_LEVEL_SEMIALPHABETIC",
