@@ -6,6 +6,7 @@ import os
 import webbrowser
 import html
 from sys import argv
+from pathlib import Path
 
 def main():
     page = [
@@ -27,6 +28,9 @@ def main():
     ]
 
     path = argv[1] if argv[1:] else '.'
+    position = None
+    if os.path.isfile(path):
+        path, position = os.path.split(path)
 
     files = sorted(os.listdir(path))
     for f in files:
@@ -46,7 +50,10 @@ def main():
     with open(index, 'w', encoding='utf-8') as f:
         f.write(page)
 
-    webbrowser.open_new_tab(index)
+    uri = Path(index).resolve().as_uri()
+    if position:
+        uri += '#' + position
+    webbrowser.open_new_tab(uri)
 
 
 if __name__ == '__main__':
