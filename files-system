@@ -15,6 +15,7 @@
 /usr/local/bin/compton-toggle
 /usr/local/bin/read-in-browser
 /usr/local/bin/yle-stream
+/usr/local/bin/iltv-url
 
 /etc/fonts/conf.d/10-fuck-nimbus.conf
 

@@ -1,0 +1,38 @@
+#!/usr/bin/env python3
+
+import re
+from urllib.request import Request, urlopen
+from bs4 import BeautifulSoup as BS
+import html5lib
+import sys
+
+def get(url):
+    r = Request(url, headers={
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:41.0) Gecko/20100101 Firefox/41.0'
+        })
+    return urlopen(r)
+
+def main():
+    url = sys.argv[1]
+    quality = re.compile(sys.argv[2]) if sys.argv[2:] else None
+
+    il_page = BS(get(url).read().decode('latin-1'), 'html5lib')
+    mcid = il_page.find('div', {'class': 'ovp-player-single'})['data-qbrick-mcid']
+
+    playlist_url = 'http://professional.player.qbrick.com/Html5/Web/PlayerHandler.ashx?action=getdata&mcid='+mcid
+    playlist = get(playlist_url).read().decode()
+    streams = re.search('"substreams":\s*\[(.*?)\]', playlist).group(1)
+    streams = re.findall('"(https?://[^\s]*?)"', streams)
+
+    if quality:
+        for stream in streams:
+            if quality.match(stream):
+                return sys.stdout.write(stream)
+
+    sys.stdout.write(streams[0])
+
+if __name__ == '__main__':
+    try:
+        main()
+    except:
+        sys.stdout.write('/dev/null')

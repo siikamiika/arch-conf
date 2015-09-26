@@ -17,6 +17,7 @@
 ~/.mpv/scripts/stats.lua
 ~/.mpv/scripts/failnotify.lua
 ~/.mpv/scripts/yledl_hook.lua
+~/.mpv/scripts/iltv_hook.lua
 
 ~/.i3/config
 
