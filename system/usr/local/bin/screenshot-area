@@ -13,14 +13,10 @@ def sh(cmd):
 
 with open(exp_usr('~/.screenshot-area')) as f:
     lines = f.read().splitlines()
-    SSHHOST = lines[0]
-    SSHPORT = lines[1]
-    SSHUSER = lines[2]
-    SSHPASS = lines[3]
-    SSHPATH = lines[4]
-    BROWSERBASE = lines[5]
+    BROWSERBASE = lines[0]
 
 path = '~/Pictures/screenshots/'
+path_remote = '~/Pictures/screenshots_remote/'
 grabtime = time.strftime('%Y-%m-%d_%H-%M-%S')
 fn = grabtime + '.png'
 fullpath = path + fn
@@ -36,10 +32,13 @@ if W > 350:
     sh('convert {fullpath} -resize 350 {thumb}'.format(**locals()))
 else:
     shutil.copy(exp_usr(fullpath), exp_usr(thumb))
-sh('sshpass -p \'{SSHPASS}\' scp -P {SSHPORT} {fullpath} {SSHUSER}@{SSHHOST}:{SSHPATH}'.format(
-    **locals()))
+
+shutil.copy(exp_usr(fullpath), exp_usr(path_remote))
+
 sh('notify-send -i {} \' \''.format(thumb))
 sh('echo -n {} | xsel -i -p'.format(url))
 sh('echo -n {} | xsel -i -b'.format(url))
+
 time.sleep(5)
+
 os.remove(exp_usr(thumb))
