@@ -11,6 +11,8 @@ import shutil
 def sh(cmd):
     return call(cmd, shell=True)
 
+sh('~/sshfs-screenshot')
+
 with open(exp_usr('~/.screenshot-area')) as f:
     lines = f.read().splitlines()
     BROWSERBASE = lines[0]
