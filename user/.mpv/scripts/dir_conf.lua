@@ -59,10 +59,13 @@ mp.add_hook("on_load", 50, function ()
             if value then
                 if property == 'video-aspect' then
                     local par = mp.get_property_native('video-params/par')
+                    local default = properties[property]
                     if par then
                         if math.abs(par - 1) < 0.01 then
-                            value = properties[property]
+                            value = default
                         end
+                    else
+                        value = default
                     end
                 end
                 new_properties[property] = value
