@@ -3,8 +3,7 @@ glxinfo
 i3lock-wrapper
 i3pystatus-git
 j4-dmenu-desktop-git
-laptop-mode-tools
-llpp-git
+llpp
 mpv-git
 opsu-git
 orbment-git
@@ -18,7 +17,6 @@ tagainijisho
 teamviewer
 ttf-google-fonts-opinionated-git
 uchardet
-unigine-heaven
 winetricks-git
 xcape-git
 yaourt
