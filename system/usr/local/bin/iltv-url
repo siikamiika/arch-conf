@@ -5,6 +5,7 @@ from urllib.request import Request, urlopen
 from bs4 import BeautifulSoup as BS
 import html5lib
 import sys
+from traceback import print_exc
 
 def get(url):
     r = Request(url, headers={
@@ -22,7 +23,7 @@ def main():
     playlist_url = 'http://professional.player.qbrick.com/Html5/Web/PlayerHandler.ashx?action=getdata&mcid='+mcid
     playlist = get(playlist_url).read().decode()
     streams = re.search('"substreams":\s*\[(.*?)\]', playlist).group(1)
-    streams = re.findall('"(https?://[^\s]*?)"', streams)
+    streams = re.findall('"(https?://.*?)"', streams)
 
     if quality:
         for stream in streams:
@@ -35,4 +36,5 @@ if __name__ == '__main__':
     try:
         main()
     except:
+        print_exc()
         sys.stdout.write('/dev/null')
