@@ -57,6 +57,14 @@ mp.add_hook("on_load", 50, function ()
     for p in pairs(properties) do
         mp.observe_property(p, 'string', function(property, value)
             if value then
+                if property == 'video-aspect' then
+                    local par = mp.get_property_native('video-params/par')
+                    if par then
+                        if math.abs(par - 1) < 0.01 then
+                            value = properties[property]
+                        end
+                    end
+                end
                 new_properties[property] = value
             end
         end)

@@ -101,6 +101,7 @@ intel-gpu-tools
 iproute2
 iputils
 jfsutils
+keychain
 leafpad
 less
 lib32-alsa-plugins
