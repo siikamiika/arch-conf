@@ -7,7 +7,7 @@ from threading import Thread
 soundlang, srclang, destlang = argv[1:4]
 
 Thread(target=lambda: call([
-    'gt_play', '-p', 'mpg123', soundlang, getoutput('xsel')])
+    'gt_play', '-p', 'mpv --volume=100', soundlang, getoutput('xsel')])
 ).start()
 
 call('gt_notify -tTo {} {}'.format(srclang, destlang), shell=True)
