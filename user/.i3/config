@@ -7,17 +7,20 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+r exec j4-dmenu-desktop
 
+#focus change helper (thanks to @kamila https://bbs.archlinux.org/viewtopic.php?id=135241)
+set $movemouse "sh -c 'eval `xdotool getactivewindow getwindowgeometry --shell`; xdotool mousemove $((X+WIDTH/2)) $((Y+HEIGHT/2))'"
+
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+bindsym $mod+h focus left; exec $movemouse
+bindsym $mod+j focus down; exec $movemouse
+bindsym $mod+k focus up; exec $movemouse
+bindsym $mod+l focus right; exec $movemouse
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+bindsym $mod+Left focus left; exec $movemouse
+bindsym $mod+Down focus down; exec $movemouse
+bindsym $mod+Up focus up; exec $movemouse
+bindsym $mod+Right focus right; exec $movemouse
 
 # move focused window
 bindsym $mod+Shift+h move left 50px
