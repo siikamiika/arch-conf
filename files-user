@@ -35,6 +35,8 @@
 
 ~/.config/dunst/dunstrc
 
+~/.local/share/applications/mimeapps.list
+
 ~/i3pystatus/colored_cpu.py
 ~/i3pystatus/nvidia_temp.py
 ~/i3pystatus/cond_text.py
