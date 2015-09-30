@@ -123,8 +123,8 @@ endif
 imap <C-BS> <C-W>
 
 " move lines up/down (Up/Down bound to AltGr+k/j)
-nnoremap <Up> :m .+1<CR>==
-nnoremap <Down> :m .-2<CR>==
+nnoremap <Up> :m .-2<CR>==
+nnoremap <Down> :m .+1<CR>==
 vnoremap <Up> :m '<-2<CR>gv=gv
 vnoremap <Down> :m '>+1<CR>gv=gv
 
