@@ -69,12 +69,12 @@
 
 ### clipboard/selection stuff
 # PRIMARY to clipboard
-"echo "`xsel -p`" | python -c "import sys;print('\n'.join(sys.stdin.readlines())[:-1], end='')" | xsel -i -b"
+"echo "`xsel -p`" | strip-last-char | xsel -i -b"
     Control+Mod4 + v
 # clipboard to PRIMARY
-"echo "`xsel -b`" | python -c "import sys;print('\n'.join(sys.stdin.readlines())[:-1], end='')" | xsel -i -p"
+"echo "`xsel -b`" | strip-last-char | xsel -i -p"
     Shift+Mod4 + Insert
-"echo "`xsel -b`" | python -c "import sys;print('\n'.join(sys.stdin.readlines())[:-1], end='')" | xsel -i -p"
+"echo "`xsel -b`" | strip-last-char | xsel -i -p"
     Shift+Mod4+Mod5 + i
 # clear clipboard and PRIMARY
 "echo -n ' ' | xsel -i -p && echo -n ' ' | xsel -i -b"
