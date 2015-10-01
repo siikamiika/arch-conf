@@ -67,6 +67,17 @@
 "xte 'mouseclick 7'"
     Shift + b:5
 
+### clipboard/selection stuff
+# PRIMARY to clipboard
+"echo -n `xsel -p` | xsel -i -b"
+    Control+Mod4 + v
+# clipboard to PRIMARY
+"echo -n `xsel -b` | xsel -i -p"
+    Shift+Mod4 + Insert
+# alternative for clipboard to PRIMARY
+"echo -n `xsel -b` | xsel -i -p"
+    Shift+Mod4+Mod5 + i
+
 ### compton
 "compton-toggle"
     Alt+Mod4 + F12
