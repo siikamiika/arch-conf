@@ -74,9 +74,12 @@
 # clipboard to PRIMARY
 "echo -n `xsel -b` | xsel -i -p"
     Shift+Mod4 + Insert
-# alternative for clipboard to PRIMARY
 "echo -n `xsel -b` | xsel -i -p"
     Shift+Mod4+Mod5 + i
+# clear clipboard and PRIMARY
+"echo -n ' ' | xsel -i -p && echo -n ' ' | xsel -i -b"
+    Control+Mod4 + z
+
 
 ### compton
 "compton-toggle"
