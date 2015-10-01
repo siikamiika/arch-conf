@@ -8,6 +8,7 @@
 ~/.xinitrc
 ~/.Xmodmap
 ~/.compton.conf
+~/.xserverrc
 
 ~/.mpv/mpv.conf
 ~/.mpv/input.conf
