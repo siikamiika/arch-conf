@@ -23,9 +23,6 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 fcitx -d &
 
-### gotta go fast
-xset r rate 300 30
-
 if [ $(fgconsole) == "2" ]; then
     exec gnome-session
 else
