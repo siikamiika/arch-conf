@@ -69,7 +69,7 @@
 
 ### clipboard/selection stuff
 # PRIMARY to clipboard
-"echo -n `xsel -p` | xsel -i -b"
+"echo "`xsel -p`" | python -c "import sys;print('\n'.join(sys.stdin.readlines())[:-1], end='')" | xsel -i -b"
     Control+Mod4 + v
 # clipboard to PRIMARY
 "echo "`xsel -b`" | python -c "import sys;print('\n'.join(sys.stdin.readlines())[:-1], end='')" | xsel -i -p"
