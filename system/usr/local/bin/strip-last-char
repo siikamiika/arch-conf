@@ -3,5 +3,5 @@
 import sys
 
 lines = sys.stdin.readlines()
-lines = '\n'.join(lines)
+lines = ''.join(lines)
 print(lines[:-1], end='')
