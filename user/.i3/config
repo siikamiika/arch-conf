@@ -91,6 +91,10 @@ bindsym Mod1+Mod4+Left move workspace to output left
 bindsym Mod1+Mod4+l move workspace to output right
 bindsym Mod1+Mod4+h move workspace to output left
 
+# scratchpad
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)

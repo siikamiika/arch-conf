@@ -1,6 +1,7 @@
 compton-git
 i3lock-wrapper
 i3pystatus-git
+icewm-git
 j4-dmenu-desktop-git
 llpp
 mpv-git
@@ -12,6 +13,7 @@ python-colour
 python-netifaces
 python-pyalsaaudio
 python-pywapi
+ranger-git
 tagainijisho
 teamviewer
 ttf-google-fonts-opinionated-git
