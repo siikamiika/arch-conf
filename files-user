@@ -35,6 +35,8 @@
 ~/.config/ranger/rc.conf
 ~/.config/ranger/rifle.conf
 
+~/.config/pcmanfm/default/pcmanfm.conf
+
 ~/.config/dunst/dunstrc
 
 ~/.local/share/applications/mimeapps.list
