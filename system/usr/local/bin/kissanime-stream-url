@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+
+import cfscrape
+import html5lib
+from bs4 import BeautifulSoup as BS
+import re
+import sys
+from traceback import print_exc
+from base64 import b64decode
+
+def main():
+    url = sys.argv[1]
+    quality = sys.argv[2] if sys.argv[2:] else None
+
+    scraper = cfscrape.create_scraper()
+    page = BS(scraper.get(url).content, 'html5lib')
+    quality_selector = page.find(id='selectQuality')
+
+    try:
+        option = quality_selector.find(text=re.compile(quality)).parent
+    except (TypeError, AttributeError) as e:
+        option = quality_selector.option
+
+    stream = b64decode(option['value']).decode()
+    sys.stdout.write(stream)
+
+if __name__ == '__main__':
+    try:
+        main()
+    except:
+        print_exc()
+        sys.stdout.write('/dev/null')

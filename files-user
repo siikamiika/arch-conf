@@ -20,6 +20,7 @@
 ~/.mpv/scripts/failnotify.lua
 ~/.mpv/scripts/yledl_hook.lua
 ~/.mpv/scripts/iltv_hook.lua
+~/.mpv/scripts/kissanime_hook.lua
 
 ~/.i3/config
 
