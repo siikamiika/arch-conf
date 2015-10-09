@@ -7,13 +7,28 @@ import re
 import sys
 from traceback import print_exc
 from base64 import b64decode
+import pickle
+import os
+
+PICKLE_PATH = os.path.expanduser('~/.kissanime-cfscrape')
 
 def main():
     url = sys.argv[1]
     quality = sys.argv[2] if sys.argv[2:] else None
 
-    scraper = cfscrape.create_scraper()
-    page = BS(scraper.get(url).content, 'html5lib')
+    try:
+        with open(PICKLE_PATH, 'rb') as f:
+            scraper = pickle.loads(f.read())
+            page = scraper.get(url)
+    except Exception as e:
+        print_exc()
+        scraper = cfscrape.create_scraper()
+        page = scraper.get(url)
+
+    with open(PICKLE_PATH, 'wb') as f:
+        f.write(pickle.dumps(scraper))
+
+    page = BS(page.content, 'html5lib')
     quality_selector = page.find(id='selectQuality')
 
     try:
