@@ -50,5 +50,5 @@ URxvt.matcher.button: 1
 *background: #101010
 *foreground: #d4d4d4
 
-*cursorColor: darkorange2
+*cursorColor: red
 
