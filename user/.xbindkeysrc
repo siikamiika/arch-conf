@@ -78,9 +78,8 @@
     Shift+Mod4+Mod5 + i
 # clear clipboard and PRIMARY
 "echo -n ' ' | xsel -i -p && echo -n ' ' | xsel -i -b"
-    Control+Mod4 + z
-
+    Control+Mod4 + space
 
 ### compton
 "compton-toggle"
-    Alt+Mod4 + F12
+    Mod4 + F12
