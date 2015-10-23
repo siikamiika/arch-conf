@@ -131,9 +131,11 @@ bar {
 
 # custom key bindings
 bindsym $mod+semicolon exec i3lock-wrapper
+bindsym $mod+Control+p mark pdf
 
 # floating
 for_window [class="Wine"] floating enable
 for_window [class="Pcsx2"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Pcmanfm"] floating enable
+for_window [class="llpp"] move window to mark pdf
