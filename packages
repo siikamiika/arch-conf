@@ -134,6 +134,7 @@ mumble
 mutter
 nano
 nautilus
+net-tools
 netctl
 nodejs
 npm
@@ -216,6 +217,7 @@ tk
 totem
 traceroute
 tracker
+ttf-symbola
 ttf-ubraille
 usbutils
 util-linux
@@ -237,6 +239,7 @@ xclip
 xdg-user-dirs-gtk
 xdotool
 xf86-input-synaptics
+xf86-input-wacom
 xf86-video-intel
 xfsprogs
 xmlto
