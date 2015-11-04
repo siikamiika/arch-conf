@@ -23,10 +23,6 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 fcitx -d &
 
-### wacom
-xsetwacom --set "Wacom Intuos S Pen stylus" Area 0 0 15200 8550
-xsetwacom --set "Wacom Intuos S Pen stylus" MapToOutput "eDP1"
-
 if [ $(fgconsole) == "2" ]; then
     exec gnome-session
 elif [ $(fgconsole) == "3" ]; then
