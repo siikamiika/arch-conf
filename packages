@@ -134,6 +134,7 @@ mumble
 mutter
 nano
 nautilus
+neovim
 net-tools
 netctl
 nodejs
@@ -142,6 +143,7 @@ ntfs-3g
 ntp
 nvidia
 openal
+openconnect
 openssh
 os-prober
 pacman
@@ -169,6 +171,7 @@ python-dbus
 python-decorator
 python-gobject2
 python-lxml
+python-neovim
 python-pexpect
 python-pip
 python-psutil
@@ -213,6 +216,7 @@ texlive-plainextra
 texlive-pstricks
 texlive-publishers
 texlive-science
+thunderbird
 tk
 totem
 traceroute
