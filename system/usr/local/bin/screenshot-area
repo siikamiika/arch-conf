@@ -11,14 +11,12 @@ import shutil
 def sh(cmd):
     return call(cmd, shell=True)
 
-sh('~/sshfs-screenshot')
-
 with open(exp_usr('~/.screenshot-area')) as f:
     lines = f.read().splitlines()
     BROWSERBASE = lines[0]
+    REMOTE = lines[1]
 
 path = '~/Pictures/screenshots/'
-path_remote = '~/Pictures/screenshots_remote/'
 grabtime = time.strftime('%Y-%m-%d_%H-%M-%S')
 fn = grabtime + '.png'
 fullpath = path + fn
@@ -35,7 +33,7 @@ if W > 350:
 else:
     shutil.copy(exp_usr(fullpath), exp_usr(thumb))
 
-shutil.copy(exp_usr(fullpath), exp_usr(path_remote))
+call(['scp', exp_usr(fullpath), REMOTE])
 
 sh('notify-send -i {} \' \''.format(thumb))
 sh('echo -n {} | xsel -i -p'.format(url))
