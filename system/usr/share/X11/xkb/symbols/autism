@@ -141,8 +141,6 @@ xkb_symbols "basic" {
     key <AB09> { [ period, greater, dead_abovedot, dead_caron ] };
     key <AB10> { [ slash, question, questiondown, dead_hook ] };
 
-    key <HKTG> { [ BackSpace ] };
-
     // misc
     key <CAPS> {
         symbols[Group1] = [ Escape, Caps_Lock, ISO_Level5_Lock, NoSymbol ],
