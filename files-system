@@ -21,6 +21,7 @@
 /usr/local/bin/wacom-apply-conf
 
 /etc/fonts/conf.d/10-fuck-nimbus.conf
+/etc/fonts/local.conf
 
 /etc/X11/xorg.conf.d/00-keyboard.conf
 /etc/X11/xorg.conf.d/50-mouse-acceleration.conf
