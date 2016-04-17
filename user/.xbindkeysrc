@@ -59,14 +59,6 @@
 "screenshot-area"
     Control+Shift + 4
 
-### touchpad & mouse
-"touchpadtoggle"
-    Control + Escape
-"xte 'mouseclick 6'"
-    Shift + b:4
-"xte 'mouseclick 7'"
-    Shift + b:5
-
 ### clipboard/selection stuff
 # PRIMARY to clipboard
 "echo "`xsel -p`" | strip-last-char | xsel -i -b"

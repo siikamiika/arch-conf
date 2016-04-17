@@ -14,7 +14,6 @@ bind-tools
 binutils
 bison
 bitlbee
-bumblebee
 bzip2
 chromium
 coreutils
@@ -49,8 +48,8 @@ fish
 flex
 gajim
 gawk
-gcc
-gcc-libs
+gcc-multilib
+gcc-libs-multilib
 gdm
 gettext
 git
@@ -109,11 +108,9 @@ less
 lib32-alsa-plugins
 lib32-libjpeg-turbo
 lib32-libpulse
-lib32-mesa-libgl
 lib32-mpg123
 lib32-ncurses
 lib32-nvidia-utils
-lib32-primus
 lib32-sdl
 libreoffice-still
 libtool
@@ -127,7 +124,6 @@ make
 man-db
 man-pages
 mdadm
-mesa-demos
 mlocate
 mousetweaks
 mumble
@@ -161,7 +157,6 @@ pkgfile
 pm-utils
 powertop
 ppsspp
-primus
 procps-ng
 psmisc
 python-chardet

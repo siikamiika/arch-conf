@@ -8,7 +8,6 @@ from colored_cpu import CpuUsage
 from clockv2 import Clock
 from cond_text import Text
 from clipboard import Clipboard, Selection
-from touchpad_socket import Touchpad
 from compton import Compton
 from mpv_music import MpvMusic
 
@@ -20,17 +19,8 @@ I3BLUE = "#285577"
 TEMP_OK = "#05A600"
 LIGHT_YELLOW = "#FFFF80"
 
-status.register(Touchpad,
-    )
-
 status.register(Compton,
     )
-
-status.register("battery",
-        battery_ident="BAT1",
-        format="{percentage:3.0f}%[ {remaining:%E%hh:%Mm}]",
-        color="#ffff00",
-        )
 
 status.register(PulseAudio,
     format="♪{volume:3}{muted}",
@@ -44,7 +34,7 @@ status.register(Clock,
 
 status.register("network",
     format_up="{quality} {essid} {bytes_recv:_>4}k▼ {bytes_sent:_>4}k▲",
-    interface="wlp8s0",
+    interface="enp5s0",
     dynamic_color=False,
     on_leftclick=None,
     )
@@ -71,13 +61,8 @@ status.register(CpuTemp,
     )
 
 status.register("text",
-    text="i7-4710HQ",
+    text="i5-3550",
     color=INTEL,
-    )
-
-status.register(GpuInfo,
-    format="{0[utilization.gpu]}",
-    color=NVIDIA,
     )
 
 status.register(NvGpuTemp,
@@ -86,7 +71,7 @@ status.register(NvGpuTemp,
     )
 
 status.register(Text,
-    text="GTX 860M",
+    text="GTX 760",
     color=NVIDIA,
     condition="nvidia-smi 2>&1 > /dev/null",
     )

@@ -1,15 +1,3 @@
-chromium-pepper-flash
-compton-git
-i3lock-wrapper
-i3pystatus-git
-icewm-git
-j4-dmenu-desktop-git
-jmtpfs
-llpp
-mpv-git
-opsu-git
-orbment-git
-package-query
 pamixer-git
 pandoc-bin
 python-colour
@@ -21,7 +9,6 @@ tagainijisho
 teamviewer
 ttf-google-fonts-opinionated-git
 uchardet
-unigine-heaven
 winetricks-git
 xcape-git
 yaourt

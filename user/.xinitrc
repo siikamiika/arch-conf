@@ -26,10 +26,10 @@ fcitx -d &
 if [ $(fgconsole) == "2" ]; then
     exec gnome-session
 elif [ $(fgconsole) == "3" ]; then
-    exec compton --config ~/.compton.conf -b &
+    #exec compton --config ~/.compton.conf -b &
     exec icewm-session
 else
-    exec compton --config ~/.compton.conf -b &
+    #exec compton --config ~/.compton.conf -b &
     feh --bg-scale ~/Pictures/black.png
     exec i3
 fi
