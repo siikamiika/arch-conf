@@ -65,7 +65,7 @@ xkb_symbols "basic" {
     };
     key <AD11> {
         type = "EIGHT_LEVEL",
-        Symbols[Group1] = [ bracketleft, braceleft, Prior, Prior, Prior, Prior, Prior, Prior ]
+        Symbols[Group1] = [ bracketleft, braceleft, Prior, Prior, aring, Aring, Prior, Prior ]
     };
     key <AD12> { [ bracketright, braceright, dead_acute, dead_diaeresis ] };
     key <BKSL> { [ backslash, bar, notsign, brokenbar ] };
@@ -106,11 +106,11 @@ xkb_symbols "basic" {
     };
     key <AC10> {
         type = "EIGHT_LEVEL",
-        Symbols[Group1] = [ semicolon, colon, End, End, End, End, End, End ]
+        Symbols[Group1] = [ semicolon, colon, End, End, odiaeresis, Odiaeresis, End, End ]
     };
     key <AC11> {
         type = "EIGHT_LEVEL",
-        Symbols[Group1] = [ apostrophe, quotedbl, Next, Next, Next, Next, Next, Next ]
+        Symbols[Group1] = [ apostrophe, quotedbl, Next, Next, adiaeresis, Adiaeresis, Next, Next ]
     };
 
     // bottom letter row
@@ -149,6 +149,7 @@ xkb_symbols "basic" {
 
     include "level3(ralt_switch)"
     modifier_map Mod5 { <HENK> };
+    modifier_map Mod2 { <MUHE> };
     replace key <MDSW> {
         type[Group1] = "ONE_LEVEL",
         symbols[Group1] = [ ISO_Level5_Shift ]
