@@ -33,35 +33,26 @@ xkb_symbols "basic" {
 
     // first letter row
     key <AD01> { [ q, Q, aring, Aring ] };
-    key <AD02> {
-        type = "EIGHT_LEVEL_SEMIALPHABETIC",
-        Symbols[Group1] = [ w, W, 7, 7, 7, 7, 7, 7 ]
-    };
-    key <AD03> {
-        type = "EIGHT_LEVEL_SEMIALPHABETIC",
-        Symbols[Group1] = [ e, E, 8, 8, 8, 8, 8, 8 ]
-    };
-    key <AD04> {
-        type = "EIGHT_LEVEL_SEMIALPHABETIC",
-        Symbols[Group1] = [ r, R, 9, 9, 9, 9, 9, 9 ]
-    };
-    key <AD05> {
-        type = "EIGHT_LEVEL_SEMIALPHABETIC",
-        Symbols[Group1] = [ t, T, minus, minus, minus, minus, minus, minus ]
-    };
+    key <AD02> { [ w, W, w, W ] };
+    key <AD03> { [ e, E, e, E ] };
+    key <AD04> { [ r, R, r, R ] };
+    key <AD05> { [ t, T, t, T ] };
     key <AD06> { [ y, Y, udiaeresis, Udiaeresis ] };
     key <AD07> {
         type = "EIGHT_LEVEL_SEMIALPHABETIC",
-        Symbols[Group1] = [ u, U, Delete, Delete, Delete, Delete, Delete, Delete ]
+        Symbols[Group1] = [ u, U, Delete, Delete, 4, 4, 4, 4 ]
     };
     key <AD08> {
         type = "EIGHT_LEVEL_SEMIALPHABETIC",
-        Symbols[Group1] = [ i, I, Insert, Insert, Insert, Insert, Insert, Insert ]
+        Symbols[Group1] = [ i, I, Insert, Insert, 5, 5, 5, 5 ]
     };
-    key <AD09> { [ o, O, odiaeresis, Odiaeresis ] };
+    key <AD09> {
+        type = "EIGHT_LEVEL_SEMIALPHABETIC",
+        Symbols[Group1] = [ o, O, odiaeresis, Odiaeresis, 6, 6, 6, 6 ]
+    };
     key <AD10> {
         type = "EIGHT_LEVEL_SEMIALPHABETIC",
-        Symbols[Group1] = [ p, P, Home, Home, Home, Home, Home, Home ]
+        Symbols[Group1] = [ p, P, Home, Home, plus, plus, plus, plus ]
     };
     key <AD11> {
         type = "EIGHT_LEVEL",
@@ -72,37 +63,22 @@ xkb_symbols "basic" {
 
     // second letter row
     key <AC01> { [ a, A, adiaeresis, Adiaeresis ] };
-    key <AC02> {
-        type = "EIGHT_LEVEL_SEMIALPHABETIC",
-        Symbols[Group1] = [ s, S, 4, section, 4, 4, 4, 4 ]
-    };
-    key <AC03> {
-        type = "EIGHT_LEVEL_SEMIALPHABETIC",
-        Symbols[Group1] = [ d, D, 5, ETH, 5, 5, 5, 5 ]
-    };
-    key <AC04> {
-        type = "EIGHT_LEVEL_SEMIALPHABETIC",
-        Symbols[Group1] = [ f, F, 6, 6, 6, 6, 6, 6 ]
-    };
-    key <AC05> {
-        type = "EIGHT_LEVEL_SEMIALPHABETIC",
-        Symbols[Group1] = [ g, G, plus, plus, plus, plus, plus, plus ]
-    };
-    key <AC06> {
-        type = "EIGHT_LEVEL_SEMIALPHABETIC",
-        Symbols[Group1] = [ h, H, Left, Left, Left, Left, Left, Left ]
-    };
+    key <AC02> { [ s, S, s, section ] };
+    key <AC03> { [ d, D, d, D ] };
+    key <AC04> { [ f, F, f, F ] };
+    key <AC05> { [ g, G, g, G ] };
+    key <AC06> { [ h, H, Left, Left ] };
     key <AC07> {
         type = "EIGHT_LEVEL_SEMIALPHABETIC",
-        Symbols[Group1] = [ j, J, Down, Down, Down, Down, Down, Down ]
+        Symbols[Group1] = [ j, J, Down, Down, 1, 1, 1, 1 ]
     };
     key <AC08> {
         type = "EIGHT_LEVEL_SEMIALPHABETIC",
-        Symbols[Group1] = [ k, K, Up, Up, Up, Up, Up, Up ]
+        Symbols[Group1] = [ k, K, Up, Up, 2, 2, 2, 2 ]
     };
     key <AC09> {
         type = "EIGHT_LEVEL_SEMIALPHABETIC",
-        Symbols[Group1] = [ l, L, Right, Right, Right, Right, Right, Right ]
+        Symbols[Group1] = [ l, L, Right, Right, 3, 3, 3, 3 ]
     };
     key <AC10> {
         type = "EIGHT_LEVEL",
@@ -115,26 +91,11 @@ xkb_symbols "basic" {
 
     // bottom letter row
     key <LSGT> { [ adiaeresis, Adiaeresis, odiaeresis, Odiaeresis ] };
-    key <AB01> {
-        type = "EIGHT_LEVEL_SEMIALPHABETIC",
-        Symbols[Group1] = [ z, Z, 0, 0, 0, 0, 0, 0 ]
-    };
-    key <AB02> {
-        type = "EIGHT_LEVEL_SEMIALPHABETIC",
-        Symbols[Group1] = [ x, X, 1, 1, 1, 1, 1, 1 ]
-    };
-    key <AB03> {
-        type = "EIGHT_LEVEL_SEMIALPHABETIC",
-        Symbols[Group1] = [ c, C, 2, copyright, 2, 2, 2, 2 ]
-    };
-    key <AB04> {
-        type = "EIGHT_LEVEL_SEMIALPHABETIC",
-        Symbols[Group1] = [ v, V, 3, registered, 3, 3, 3, 3 ]
-    };
-    key <AB05> {
-        type = "EIGHT_LEVEL_SEMIALPHABETIC",
-        Symbols[Group1] = [ b, B, period, comma, period, comma, period, comma ]
-    };
+    key <AB01> { [ z, Z, z, Z ] };
+    key <AB02> { [ x, X, x, X ] };
+    key <AB03> { [ c, C, c, copyright ] };
+    key <AB04> { [ v, V, v, registered ] };
+    key <AB05> { [ b, B, b, B ] };
     key <AB06> { [ n, N, ntilde, Ntilde ] };
     key <AB07> { [ m, M, mu, mu ] };
     key <AB08> { [ comma, less, ccedilla, Ccedilla ] };
