@@ -106,7 +106,6 @@ xkb_symbols "basic" {
     };
 
     include "level3(ralt_switch)"
-    modifier_map Mod5 { <HENK> };
     modifier_map Mod2 { <MUHE> };
     replace key <MDSW> {
         type[Group1] = "ONE_LEVEL",
