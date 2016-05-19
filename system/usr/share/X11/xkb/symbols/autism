@@ -16,7 +16,7 @@ xkb_symbols "basic" {
     key <AE07> { [ 7, ampersand, dead_horn, onehalf ] };
     key <AE08> {
         type = "EIGHT_LEVEL",
-        Symbols[Group1] = [ 8, asterisk, dead_ogonek, threequarters, 8, asterisk, asterisk, asterisk ]
+        symbols[Group1] = [ 8, asterisk, dead_ogonek, threequarters, 8, asterisk, asterisk, asterisk ]
     };
     key <AE09> { [ 9, parenleft, leftsinglequotemark, dead_breve ] };
     key <AE10> { [ 0, parenright, rightsinglequotemark, dead_abovering ] };
@@ -32,23 +32,23 @@ xkb_symbols "basic" {
     key <AD06> { [ y, Y, udiaeresis, Udiaeresis ] };
     key <AD07> {
         type = "EIGHT_LEVEL_SEMIALPHABETIC",
-        Symbols[Group1] = [ u, U, Delete, Delete, 4, 4, Delete, Delete ]
+        symbols[Group1] = [ u, U, Delete, Delete, 4, 4, Delete, Delete ]
     };
     key <AD08> {
         type = "EIGHT_LEVEL_SEMIALPHABETIC",
-        Symbols[Group1] = [ i, I, Insert, Insert, 5, 5, Insert, Insert ]
+        symbols[Group1] = [ i, I, Insert, Insert, 5, 5, Insert, Insert ]
     };
     key <AD09> {
         type = "EIGHT_LEVEL_SEMIALPHABETIC",
-        Symbols[Group1] = [ o, O, odiaeresis, Odiaeresis, 6, 6, 6, 6 ]
+        symbols[Group1] = [ o, O, odiaeresis, Odiaeresis, 6, 6, 6, 6 ]
     };
     key <AD10> {
         type = "EIGHT_LEVEL_SEMIALPHABETIC",
-        Symbols[Group1] = [ p, P, Home, Home, plus, plus, Home, Home ]
+        symbols[Group1] = [ p, P, Home, Home, plus, plus, Home, Home ]
     };
     key <AD11> {
         type = "EIGHT_LEVEL",
-        Symbols[Group1] = [ bracketleft, braceleft, Prior, Prior, aring, Aring, Prior, Prior ]
+        symbols[Group1] = [ bracketleft, braceleft, Prior, Prior, aring, Aring, Prior, Prior ]
     };
     key <AD12> { [ bracketright, braceright, dead_acute, dead_diaeresis ] };
     key <BKSL> {
@@ -67,23 +67,23 @@ xkb_symbols "basic" {
     key <AC06> { [ h, H, Left, Left ] };
     key <AC07> {
         type = "EIGHT_LEVEL_SEMIALPHABETIC",
-        Symbols[Group1] = [ j, J, Down, Down, 1, 1, Down, Down ]
+        symbols[Group1] = [ j, J, Down, Down, 1, 1, Down, Down ]
     };
     key <AC08> {
         type = "EIGHT_LEVEL_SEMIALPHABETIC",
-        Symbols[Group1] = [ k, K, Up, Up, 2, 2, Up, Up ]
+        symbols[Group1] = [ k, K, Up, Up, 2, 2, Up, Up ]
     };
     key <AC09> {
         type = "EIGHT_LEVEL_SEMIALPHABETIC",
-        Symbols[Group1] = [ l, L, Right, Right, 3, 3, Right, Right ]
+        symbols[Group1] = [ l, L, Right, Right, 3, 3, Right, Right ]
     };
     key <AC10> {
         type = "EIGHT_LEVEL",
-        Symbols[Group1] = [ semicolon, colon, End, End, odiaeresis, Odiaeresis, End, End ]
+        symbols[Group1] = [ semicolon, colon, End, End, odiaeresis, Odiaeresis, End, End ]
     };
     key <AC11> {
         type = "EIGHT_LEVEL",
-        Symbols[Group1] = [ apostrophe, quotedbl, Next, Next, adiaeresis, Adiaeresis, Next, Next ]
+        symbols[Group1] = [ apostrophe, quotedbl, Next, Next, adiaeresis, Adiaeresis, Next, Next ]
     };
 
     // bottom letter row
@@ -101,8 +101,8 @@ xkb_symbols "basic" {
 
     // misc
     key <CAPS> {
-        symbols[Group1] = [ Escape, Caps_Lock, ISO_Level5_Lock, NoSymbol ],
-        actions[Group1] = [ NoAction(), LockMods(modifiers=Lock), LockMods(modifiers=NumLock), NoAction() ]
+        symbols[Group1] = [ Escape, Caps_Lock, Eisu_toggle, NoSymbol ],
+        actions[Group1] = [ NoAction(), LockMods(modifiers=Lock), NoAction(), NoAction() ]
     };
 
     include "level3(ralt_switch)"
