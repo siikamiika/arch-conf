@@ -29,7 +29,8 @@
 "gt_notify -tTo auto en"
     Alt+Mod4 + x
 # english to finnish, with tts
-"tl-soundnotify en en fi"
+#"tl-soundnotify en en fi"
+"coed"
     Alt+Mod4 + e
 # japanese to english, with tts
 "tl-soundnotify ja ja en"
@@ -58,6 +59,9 @@
 ### screenshot
 "screenshot-area"
     Control+Shift + 4
+### ocr
+"screenshot-ocr"
+    Control+Shift + 5
 
 ### clipboard/selection stuff
 # PRIMARY to clipboard

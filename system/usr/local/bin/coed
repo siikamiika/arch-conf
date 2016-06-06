@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+import json
+from subprocess import call, check_output
+from urllib.request import urlopen, Request
+import re
+
+text = check_output(['xsel', '-p']).decode('utf-8')
+r = Request('http://localhost:9871/coed', json.dumps(text.strip()).encode('utf-8'))
+response = urlopen(r).read().decode()
+notification = response.replace('n\t', '')
+notification = re.sub(r'([\d]+)\t(.*)', r'\1. \2\n', notification)
+notification = notification.replace('\t', '')
+call(['notify-send', '-t', '900000', notification])

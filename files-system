@@ -19,6 +19,8 @@
 /usr/local/bin/strip-last-char
 /usr/local/bin/kissanime-stream-url
 /usr/local/bin/wacom-apply-conf
+/usr/local/bin/coed
+/usr/local/bin/screenshot-ocr
 
 /etc/fonts/conf.d/10-fuck-nimbus.conf
 /etc/fonts/local.conf

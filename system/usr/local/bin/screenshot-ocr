@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+
+from subprocess import call
+import time
+import sys
+
+path = '/tmp/ocr/'
+grabtime = time.strftime('%Y-%m-%d_%H-%M-%S')
+fn = grabtime + '.png'
+fullpath = path + fn
+
+time.sleep(0.2)
+status = call(['scrot', '-s', fullpath])
+if status != 0:
+    sys.exit(status)
+
+call(['curl', 'http://localhost:9870/ocr?filename={}'.format(fn)])
